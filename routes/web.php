@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\SiteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,11 +13,19 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', function () {
-    
-    return view('welcome');
-});
+Route::get('/', [SiteController::class, 'main'])->name('main');
+Route::get('/about', [SiteController::class, 'about'])->name('about');
+Route::get('/portfolio', [SiteController::class, 'portfolio'])->name('portfolio');
+Route::get('/portfolio/{slug}', [SiteController::class, 'viewPortfolio'])->name('viewPortfolio');
+Route::get('/reviews', [SiteController::class, 'reviews'])->name('reviews');
+Route::get('/contact', [SiteController::class, 'contact'])->name('contact');
+Route::get('/services', [SiteController::class, 'services'])->name('services');
+Route::get('/service/{slug}', [SiteController::class, 'viewService'])->name('viewService');
 
+Route::get('/locale/{locale}', function ($locale) {
+   session(['locale'=>$locale]);
+    return back();
+});
 
 Route::middleware(['auth'])->group(function(){
 

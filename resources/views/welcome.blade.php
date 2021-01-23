@@ -1,5 +1,15 @@
 @extends('layouts.site')
 
 @section('content')
-    <p>wellcome</p>
+    @include('sections.about')
+    @include('sections.services')
+    @include('sections.features')
+    @include('sections.portfolio')
+    @include('sections.team')
+    @include('sections.form')
+    @include('sections.success')
+    @include('sections.proccess')
+    @include('sections.partners')
+    @include('sections.reviews')
+    @include('sections.form2')
 @endsection
