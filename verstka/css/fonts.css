@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'FutuBd';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../fonts/FutuBd.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'FutuBdIt';
+  font-style: italic;
+  font-weight: 900;
+  font-display: block;
+  src: url("../fonts/FutuBdIt.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'FutuMd';
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url("../fonts/FutuMd.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'FUTURAB.TTF';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../fonts/FUTURAB.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: 'FuturaBoldItalicBT';
+  font-style: italic;
+  font-weight: 900;
+  font-display: block;
+  src: url("../fonts/FuturaBoldItalicBT.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'FuturaMediumItalicBT';
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url("../fonts/FuturaMediumItalicBT.ttf") format("truetype");
+}

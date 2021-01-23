@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <g id="search" transform="translate(-335 -696)">
+    <g id="Эллипс_360" data-name="Эллипс 360" transform="translate(335 696)" fill="none" stroke="#fff" stroke-width="1">
+      <circle cx="13" cy="13" r="13" stroke="none"/>
+      <circle cx="13" cy="13" r="12.5" fill="none"/>
+    </g>
+    <path id="Icon_ionic-ios-search" data-name="Icon ionic-ios-search" d="M14.725,14.093l-2.877-2.9a4.1,4.1,0,1,0-.622.63L14.083,14.7a.443.443,0,0,0,.625.016A.446.446,0,0,0,14.725,14.093Zm-6.1-2.239a3.238,3.238,0,1,1,2.29-.948A3.218,3.218,0,0,1,8.625,11.854Z" transform="translate(339.423 700.175)" fill="#fff"/>
+  </g>
+</svg>
