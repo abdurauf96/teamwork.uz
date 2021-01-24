@@ -3,13 +3,12 @@
 @section('content')
     <div class="container">
         <div class="row">
-            
-
+          
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Edit About #{{ $about->id }}</div>
+                    <div class="card-header">Create New Service</div>
                     <div class="card-body">
-                        <a href="{{ url('/admin/about') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/admin/services') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 
@@ -21,14 +20,9 @@
                             </ul>
                         @endif
 
-                        {!! Form::model($about, [
-                            'method' => 'PATCH',
-                            'url' => ['/admin/about', $about->id],
-                            'class' => 'form-horizontal',
-                            'files' => true
-                        ]) !!}
+                        {!! Form::open(['url' => '/admin/services', 'class' => 'form-horizontal', 'files' => true]) !!}
 
-                        @include ('admin.about.form', ['formMode' => 'edit'])
+                        @include ('admin.services.form', ['formMode' => 'create'])
 
                         {!! Form::close() !!}
 

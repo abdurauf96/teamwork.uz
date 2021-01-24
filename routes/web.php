@@ -50,3 +50,5 @@ Route::middleware(['auth'])->group(function(){
 require __DIR__.'/auth.php';
 Route::resource('admin/menus', '\App\Http\Controllers\Admin\MenusController');
 Route::resource('admin/about', '\App\Http\Controllers\Admin\AboutController');
+Route::resource('admin/services', '\App\Http\Controllers\Admin\ServicesController');
+Route::resource('admin/service-types', '\App\Http\Controllers\Admin\ServiceTypesController');

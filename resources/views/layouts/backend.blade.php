@@ -148,6 +148,7 @@
     
     <!-- AdminLTE App -->
     <script src="/admin/js/app.min.js" type="text/javascript"></script>
+    <script src="/admin/js/my.js" type="text/javascript"></script>
 
     {{-- <script src="/js/jquery.dataTables.js" type="text/javascript"></script>
     <script src="/js/dataTables.bootstrap.js" type="text/javascript"></script> --}}

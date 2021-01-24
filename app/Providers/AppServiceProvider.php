@@ -22,6 +22,11 @@ class AppServiceProvider extends ServiceProvider
             $about=\App\Models\About::first();
             $view->with(compact('about'));
         });
+
+        view()->composer('sections.services', function($view){
+            $services=\App\Models\Service::all();
+            $view->with(compact('services'));
+        });
     }
 
     /**

@@ -4,8 +4,8 @@
 	{!! Meta::toHtml() !!}
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<meta name="author" content="{$page article-author}">
-	<meta name="keywords" content="{$page keywords}">
-	{{-- <meta name="description" content="{$page.description|escape}"> --}}
+	
+	
     <meta name="robots" content="noindex">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate">

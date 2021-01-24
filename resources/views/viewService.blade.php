@@ -5,8 +5,8 @@
     <section class="partfolio page-partfolio">
             
         <div class="container">
-            <h3 class="block-title">Logotip tayyorlash xizmati</h3>
-            <div class="block-slug">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual</div>
+            <h3 class="block-title">{{ $service['title_'.\App::getLocale()] }}</h3>
+            <div class="block-slug">{{ $service['body_'.\App::getLocale()] }}</div>
 
             <div class="design-t row">
                 <div class="col-md-6 col-12 mb-4">

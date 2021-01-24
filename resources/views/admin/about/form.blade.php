@@ -73,7 +73,9 @@
 <div class="form-group{{ $errors->has('image') ? 'has-error' : ''}}">
     {!! Form::label('image', 'Image', ['class' => 'control-label']) !!}
     {!! Form::file('image', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control']) !!}
-    {!! $errors->first('image', '<p class="help-block">:message</p>') !!}
+    @isset($about)
+        <img width="200" src="/admin/images/{{ $about->image }}" alt="">
+    @endisset
 </div>
 <div class="form-group{{ $errors->has('link') ? 'has-error' : ''}}">
     {!! Form::label('link', 'Link', ['class' => 'control-label']) !!}
@@ -88,31 +90,5 @@
 
 
 @section('js')
-<script>
-     $(function () {
-           $('.lang_toogle').click(function(e){
-               e.preventDefault();
-               var lang=$(this).data('lang');
-               $(this).addClass('lang_active');
-               $(this).siblings().removeClass('lang_active');
-            
-              if(lang=="uz"){
-                  $('.about_ru').addClass('hide');
-                  $('.about_uz').addClass('show');
-                  $('.about_uz').removeClass('hide');
-              }else if(lang=="ru"){
-                $('.about_uz').addClass('hide');
-                $('.about_ru').addClass('show');
-                $('.about_ru').removeClass('hide');
-              }else{
-                $('.about_uz').addClass('hide');
-                $('.about_en').addClass('show');
-                $('.about_en').removeClass('hide');
-                $('.about_ru').addClass('hide');
-              }
-                
 
-           })
-       });
-</script> 
 @endsection

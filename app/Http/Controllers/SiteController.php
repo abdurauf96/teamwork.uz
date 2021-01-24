@@ -44,11 +44,19 @@ class SiteController extends Controller
 
     public function services()
     {
+        
         return view('services');
     }
 
     public function viewService($slug)
     {
-        return view('viewService');
+        $service=\App\Models\Service::whereSlug($slug)->first();
+        if(!$service){
+            abort(404);
+        }
+        Meta::prependTitle($service['name_'.\App::getLocale()]);
+        Meta::setDescription($service->seo_desc);
+        Meta::setKeywords($service->seo_keyword);
+        return view('viewService', compact('service'));
     }
 }
