@@ -30,7 +30,7 @@ Route::get('/locale/{locale}', function ($locale) {
 Route::middleware(['auth'])->group(function(){
 
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('admin.dashboard');
     })->middleware(['auth'])->name('dashboard');
 
     Route::get('/admin', 'App\Http\Controllers\Admin\AdminController@index');
@@ -48,3 +48,5 @@ Route::middleware(['auth'])->group(function(){
 });
 
 require __DIR__.'/auth.php';
+Route::resource('admin/menus', '\App\Http\Controllers\Admin\MenusController');
+Route::resource('admin/about', '\App\Http\Controllers\Admin\AboutController');

@@ -3,21 +3,21 @@
         <div class="row align-items-center">
             <div class="col-lg-6 pl-0">
                 <div class="about-vid">
-                    <img src="img/about-pic.png" alt="" data-aos="fade-right" data-aos-duration="500"/>
+                    <img src="/admin/images/{{ $about->image }}" alt="" data-aos="fade-right" data-aos-duration="500"/>
                     <a href="https://www.youtube.com/watch?v=Z5zUpeNesJg" data-fancybox="video"  class="play-btn" data-aos="flip-right" data-aos-duration="700" data-aos-delay="500"></a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="about-main">
-                    <h3 class="about-tit" data-aos="fade-up" data-aos-duration="500">Teamwork jamoasi bilan ishlash sizga cheksiz  imkoniyatlarni taqdim qiladi</h3>
+                    <h3 class="about-tit" data-aos="fade-up" data-aos-duration="500">{{ $about['main_title_'.App::getLocale()] }}</h3>
                     <div class="about-txt" data-aos="fade-up" data-aos-duration="700">
-                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account.
+                        {{ $about['main_desc_'.App::getLocale()] }}
                     </div>
                     <article>
                         <div class="article-tit" data-aos="fade-up" data-aos-duration="900">
-                            Chumchuq so'ysa ham, qassob so'ysin!
+                            {{ $about['second_title_'.App::getLocale()] }}
                         </div>
-                        <p data-aos="fade-up" data-aos-duration="950">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account.</p>
+                        <p data-aos="fade-up" data-aos-duration="950">{{ $about['second_desc_'.App::getLocale()] }}</p>
                     </article>
                     
                     @if (Route::currentRouteName()=='main')

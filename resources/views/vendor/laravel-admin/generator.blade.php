@@ -3,7 +3,6 @@
 @section('content')
     <div class="container">
         <div class="row">
-            @include('admin.sidebar')
 
             <div class="col-md-9">
                 <div class="card">
@@ -128,7 +127,7 @@
     </div>
 @endsection
 
-@section('scripts')
+@section('js')
     <script type="text/javascript">
         $( document ).ready(function() {
             $(document).on('click', '.btn-add', function(e) {

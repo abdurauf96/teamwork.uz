@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+	{!! Meta::toHtml() !!}
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<meta name="author" content="{$page article-author}">
 	<meta name="keywords" content="{$page keywords}">
-	<meta name="description" content="{$page.description|escape}">
+	{{-- <meta name="description" content="{$page.description|escape}"> --}}
     <meta name="robots" content="noindex">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate">
@@ -12,7 +13,6 @@
     <meta http-equiv="cleartype" content="on">
     <meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>Teamwork</title>
 	
 	<link rel="stylesheet" type="text/css" href="/css/plugins.css">
 	<link rel="shortcut icon" href="/img/logo.svg" type="image/x-icon">
@@ -36,29 +36,42 @@
 					<div class="col-auto">
 						<a href="/" class="header__logo logo">
 							<span><img src="img/logo.svg" alt=""></span>
-							Teamwork.uz {{ \App::getLocale() }}
+							Teamwork.uz 
 						</a>	
 					</div>
 	
 					<div class="col-auto ml-auto d-md-block d-none">
 						<nav class="header-nav">
 							<ul>
-								<li><a href="servises.html">Xizmatlar</a></li>
-								<li><a href="partfolio.html">Portfolio</a></li>
-								<li><a href="about.html">Biz haqimizda</a></li>
-								<li><a href="reviews.html">Sharhlar</a></li>
-								<li><a href="contacts.html">Bog'lanish</a></li>
+								@foreach ($menus as $item)
+									<li><a href="{{ $item->link }}">{{ $item['title_'.\App::getLocale()] }}</a></li>
+								@endforeach
 							</ul>
 						</nav>				
 					</div>
 	
 					<div class="col-auto lang-wrap ml-auto ml-sm-0">
 						<div class="lang">
+							@if (\App::getLocale()=='uz')
+							<div class="lang-sel">O'zbek</div>
+							<div class="lang-drop">
+								<a href="/locale/ru">Rus</a>
+								<a href="/locale/en">Eng</a>
+							</div>
+							@elseif(\App::getLocale()=='en')
 							<div class="lang-sel">Eng</div>
 							<div class="lang-drop">
-								<a href="#">Rus</a>
-								<a href="#">O'zbek</a>
+								<a href="/locale/ru">Rus</a>
+								<a href="/locale/uz">O'zbek</a>
 							</div>
+							@else
+							<div class="lang-sel">Rus</div>
+							<div class="lang-drop">
+								<a href="/locale/en">Eng</a>
+								<a href="/locale/uz">O'zbek</a>
+							</div>
+							@endif
+							
 						</div>	
 					</div>
 	

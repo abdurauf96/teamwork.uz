@@ -4,10 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Butschster\Head\Facades\Meta;
 class SiteController extends Controller
 {
+   
     public function main()
     {
+        
+        Meta::prependTitle('Bosh Sahifa');
+        Meta::setDescription('Awesome page');
+        Meta::setKeywords(['Awesome keyword', 'keyword2']);
         return view('welcome');
     }
 

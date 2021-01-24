@@ -13,7 +13,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        view()->composer('layouts.site', function($view){
+            $menus=\App\Models\Menu::orderBy('order')->get();
+            $view->with(compact('menus'));
+        });
+
+        view()->composer('sections.about', function($view){
+            $about=\App\Models\About::first();
+            $view->with(compact('about'));
+        });
     }
 
     /**

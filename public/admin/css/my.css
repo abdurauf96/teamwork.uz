@@ -1,0 +1,10 @@
+
+.lang_active{
+    background-color: #0a6277;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
