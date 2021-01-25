@@ -32,7 +32,14 @@
                                     <tr>
                                         <th>ID</th><td>{{ $servicetype->id }}</td>
                                     </tr>
-                                    <tr><th> Title Uz </th><td> {{ $servicetype->title_uz }} </td></tr><tr><th> Desc Uz </th><td> {{ $servicetype->desc_uz }} </td></tr><tr><th> Title Ru </th><td> {{ $servicetype->title_ru }} </td></tr>
+                                    <tr><th> Title Uz </th><td> {{ $servicetype->title_uz }} </td></tr>
+                                    <tr><th> Description Uz </th><td> {{ $servicetype->desc_uz }} </td></tr>
+                                    <tr><th> Title Ru </th><td> {{ $servicetype->title_ru }} </td></tr>
+                                    <tr><th> Description Ru </th><td> {{ $servicetype->desc_ru }} </td></tr>
+                                    <tr><th> Title EN </th><td> {{ $servicetype->title_en }} </td></tr>
+                                    <tr><th> Description EN </th><td> {{ $servicetype->desc_en }} </td></tr>
+                                    <tr><th>Service </th><td> {{ $servicetype->service['name_'.\App::getLocale()] }} </td></tr>
+                                    <tr><th>Image </th><td><img src="/admin/images/{{ $servicetype->image }}" width="80" alt=""> </td></tr>
                                 </tbody>
                             </table>
                         </div>

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
 
-class Service extends Model
+class ServiceTechnology extends Model
 {
     use LogsActivity;
     
@@ -15,7 +15,7 @@ class Service extends Model
      *
      * @var string
      */
-    protected $table = 'services';
+    protected $table = 'service_technologies';
 
     /**
     * The database primary key value.
@@ -29,16 +29,13 @@ class Service extends Model
      *
      * @var array
      */
-    protected $fillable = ['name_uz', 'name_ru', 'name_en', 'title_uz', 'title_ru', 'title_en', 'body_uz', 'body_ru', 'body_en', 'icon', 'seo_desc', 'seo_keyword', 'slug'];
+    protected $fillable = ['service_id', 'image'];
 
-    public function types()
+    public function service()
     {
-        return $this->hasMany(ServiceType::class);
+        return $this->belongsTo(Service::class);
     }
-    public function technologies()
-    {
-        return $this->hasMany(ServiceTechnology::class);
-    }
+    
 
     /**
      * Change activity log event description

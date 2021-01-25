@@ -9,87 +9,43 @@
             <div class="block-slug">{{ $service['body_'.\App::getLocale()] }}</div>
 
             <div class="design-t row">
+                @foreach ($service->types as $type)
                 <div class="col-md-6 col-12 mb-4">
                     <div class="design-t-item design-t__item">
                         <div class="design-t-item__img" style="background-color: #FFDCDC">
-                            <img src="/img/awesome-apple.svg" alt="">
+                            <img src="/admin/images/{{ $type->image }}" alt="">
                         </div>
                         <div class="design-t-item__main">
-                            <b>Simvolli logotiplar</b>
-                            <p>kompaniyaga assotsiativ ravishda olib keladigan turli xil belgilar ishlatiladi</p>
+                            <b>{{ $type['title_'.\App::getLocale()] }}</b>
+                            <p>{{ $type['desc_'.\App::getLocale()] }}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-12 mb-4">
-                    <div class="design-t-item design-t__item">
-                        <div class="design-t-item__img" style="background-color: #E9DCFF">
-                            <img src="/img/format-color-text.svg" alt="">
-                        </div>
-                        <div class="design-t-item__main">
-                            <b>Simvolli logotiplar</b>
-                            <p>kompaniyaga assotsiativ ravishda olib keladigan turli xil belgilar ishlatiladi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-12 mb-4">
-                    <div class="design-t-item design-t__item">
-                        <div class="design-t-item__img" style="background-color: #FFF8CC">
-                            <img src="/img/logo-sass.svg" alt="">
-                        </div>
-                        <div class="design-t-item__main">
-                            <b>Simvolli logotiplar</b>
-                            <p>kompaniyaga assotsiativ ravishda olib keladigan turli xil belgilar ishlatiladi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-12 mb-4">
-                    <div class="design-t-item design-t__item">
-                        <div class="design-t-item__img" style="background-color: #ECFCFF">
-                            <img src="/img/simple-letterboxd.svg" alt="">
-                        </div>
-                        <div class="design-t-item__main">
-                            <b>Simvolli logotiplar</b>
-                            <p>kompaniyaga assotsiativ ravishda olib keladigan turli xil belgilar ishlatiladi</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+                
             </div>
 
         </div>
-
+        @if (count($service->technologies)>0)
         <div class="container pt-5">
             <div class="texno-section">
                 <h3 class="block-title">Logotip quyidagi texnologiyalar orqali chiziladi. Siz istagan tur bo'yicha</h3>
 
                 <div class="row mt-5 justify-content-center">
+                    @foreach ($service->technologies as $tech)
                     <div class="col-auto mb-4">
                         <div class="texno-section-item ">
-                            <img src="/img/adobe-illustrator-cc.png" alt="">
+                            <img src="/admin/images/{{ $tech->image }}" alt="">
                         </div>
                     </div>
-                    <div class="col-auto mb-4">
-                        <div class="texno-section-item">
-                            <img src="/img/photoshop-cc.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-auto mb-4">
-                        <div class="texno-section-item">
-                            <img src="/img/corel-d.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-auto mb-4">
-                        <div class="texno-section-item">
-                            <img src="/img/png.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-auto mb-4">
-                        <div class="texno-section-item">
-                            <img src="/img/tiff-icon.png" alt="">
-                        </div>
-                    </div>
+                    @endforeach
+                    
+                    
                 </div>
             </div>
         </div>
+        @endif
+        
     </section>
 
     <div class="section">

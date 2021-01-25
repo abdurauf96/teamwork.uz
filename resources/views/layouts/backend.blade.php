@@ -17,6 +17,8 @@
     <link href="/admin/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
     {{-- <link href="/admin/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css" /> --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.2/css/fileinput.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.2/themes/explorer/theme.min.css" rel="stylesheet" type="text/css" />
     @yield('css')
   </head>
   <body class="skin-blue">
@@ -149,7 +151,8 @@
     <!-- AdminLTE App -->
     <script src="/admin/js/app.min.js" type="text/javascript"></script>
     <script src="/admin/js/my.js" type="text/javascript"></script>
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.2/js/fileinput.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.2/themes/explorer/theme.min.css'></script>
     {{-- <script src="/js/jquery.dataTables.js" type="text/javascript"></script>
     <script src="/js/dataTables.bootstrap.js" type="text/javascript"></script> --}}
   

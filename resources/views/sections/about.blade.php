@@ -1,10 +1,13 @@
 <section class="about @isset($class) {{ $class }} @endif" id="about">
     <div class="container">
         <div class="row align-items-center">
+            @isset($about)
             <div class="col-lg-6 pl-0">
                 <div class="about-vid">
+        
                     <img src="/admin/images/{{ $about->image }}" alt="" data-aos="fade-right" data-aos-duration="500"/>
-                    <a href="https://www.youtube.com/watch?v=Z5zUpeNesJg" data-fancybox="video"  class="play-btn" data-aos="flip-right" data-aos-duration="700" data-aos-delay="500"></a>
+            
+                    <a href="{{ $about->link }}" data-fancybox="video"  class="play-btn" data-aos="flip-right" data-aos-duration="700" data-aos-delay="500"></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -31,6 +34,7 @@
                     @endif 
                 </div>
             </div>
+            @endisset
         </div>
     </div>
     @if (Route::currentRouteName()!='main')
