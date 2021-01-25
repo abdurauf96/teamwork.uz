@@ -54,3 +54,5 @@ Route::resource('admin/services', '\App\Http\Controllers\Admin\ServicesControlle
 Route::resource('admin/service-types', '\App\Http\Controllers\Admin\ServiceTypesController');
 Route::resource('admin/service-technologies', '\App\Http\Controllers\Admin\ServiceTechnologiesController');
 Route::post('/admin/service/upload-images', '\App\Http\Controllers\Admin\ServiceTechnologiesController@uploadImages');
+Route::resource('admin/portfolio-categories', '\App\Http\Controllers\Admin\PortfolioCategoriesController');
+Route::resource('admin/projects', '\App\Http\Controllers\Admin\ProjectsController');
