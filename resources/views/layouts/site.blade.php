@@ -119,17 +119,7 @@
 			</div>
         </div>
         @else
-        <div class="header-center">
-			<div class="container text-center">
-				<div class="header-p-title">Biz haqimizda</div>
-				<div class="content-breadcrump">
-					<ul class="content-breadcrump__bl">
-						<li class=""><a href="index.html">Asosiy</a></li>
-						<li class="active">Biz haqimizda</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+    	@yield('breadcrumb')
         @endif
 	
 	</header>

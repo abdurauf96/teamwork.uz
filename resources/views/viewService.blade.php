@@ -1,5 +1,14 @@
 @extends('layouts.site')
-
+@section('breadcrumb')
+<x-breadcrumb >
+    <x-slot name="parent">
+        <li><a href="/services">Xizmatlar</a></li>
+    </x-slot>
+    <x-slot name="active">
+        {{ $service['name_'.\App::getLocale()] }}
+    </x-slot>
+</x-breadcrumb>
+@endsection
 @section('content')
 <main class="page-main">
     <section class="partfolio page-partfolio">
