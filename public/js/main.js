@@ -135,7 +135,7 @@ jQuery(document).ready(function($) {
         $('.part-tab').trigger('prev.owl.carousel', [300]);
     })
 
-    // filter and Add active class to the current button (highlight it)
+    //filter and Add active class to the current button (highlight it)
     var filterBtns = $(".part-tab__link");
     filterBtns.click(function(e) {
         /* Act on the event */

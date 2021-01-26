@@ -14,7 +14,9 @@ class SiteController extends Controller
         Meta::prependTitle('Bosh Sahifa');
         Meta::setDescription('Awesome page');
         Meta::setKeywords(['Awesome keyword', 'keyword2']);
-        return view('welcome');
+        $proccesses=\App\Models\Proccess::orderBy('order')->get();
+        
+        return view('welcome', compact('proccesses'));
     }
 
     public function about()
@@ -24,12 +26,22 @@ class SiteController extends Controller
 
     public function portfolio()
     {
-        return view('portfolio');
+        $projects=\App\Models\Project::all();
+        $categories=\App\Models\PortfolioCategory::all();
+        return view('portfolio', compact('projects', 'categories'));
     }
 
     public function viewPortfolio($slug)
     {
-        return view('viewPortfolio');
+        $project=\App\Models\Project::whereSlug($slug)->first();
+        Meta::prependTitle($project['title_'.\App::getLocale()]);
+        Meta::setDescription($project->seo_desc);
+        Meta::setKeywords($project->seo_keyword);
+
+        $other_projects=\App\Models\Project::where('portfolio_category_id', $project->id)
+        ->where('id', '!=', $project->id)
+        ->get();
+        return view('viewPortfolio', compact('project', 'other_projects'));
     }
 
     public function reviews()
@@ -44,8 +56,8 @@ class SiteController extends Controller
 
     public function services()
     {
-        
-        return view('services');
+        $services=\App\Models\Service::all();
+        return view('services', compact('services'));
     }
 
     public function viewService($slug)

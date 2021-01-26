@@ -27,6 +27,11 @@ class AppServiceProvider extends ServiceProvider
             $services=\App\Models\Service::all();
             $view->with(compact('services'));
         });
+
+        view()->composer('sections.team', function($view){
+            $personals=\App\Models\Personal::all();
+            $view->with(compact('personals'));
+        });
     }
 
     /**
@@ -36,6 +41,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Blade::component('breadcrumb', Breadcrumb::class);
+        Blade::component('bread-crumb', Breadcrumb::class);
     }
 }

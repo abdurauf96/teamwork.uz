@@ -1,4 +1,5 @@
 @extends('layouts.site')
+
 @section('breadcrumb')
 <x-breadcrumb >
     <x-slot name="parent">
@@ -9,6 +10,7 @@
     </x-slot>
 </x-breadcrumb>
 @endsection
+
 @section('content')
 <main class="page-main">
     <section class="partfolio page-partfolio">

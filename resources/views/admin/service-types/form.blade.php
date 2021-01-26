@@ -2,7 +2,11 @@
     {!! Form::label('service_id', 'Service', ['class' => 'control-label']) !!}
     <select name="service_id" id="" class="form-control">
         @foreach ($services as $service)
-            <option value="{{ $service->id }}">{{ $service['name_'.\App::getLocale()] }}</option>
+            <option @isset($servicetype)
+                @if ($service->id==$servicetype->service_id)
+                    selected
+                @endif
+            @endisset  value="{{ $service->id }}">{{ $service['name_'.\App::getLocale()] }}</option>
         @endforeach
     </select>
 </div>

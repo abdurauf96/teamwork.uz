@@ -19,6 +19,7 @@
 	<!-- my styles -->
 	<link rel="stylesheet" type="text/css" href="/css/fontawesome.css">
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	@livewireStyles
 	<!-- FONTS -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -35,7 +36,7 @@
 				<div class="row align-items-center">
 					<div class="col-auto">
 						<a href="/" class="header__logo logo">
-							<span><img src="img/logo.svg" alt=""></span>
+							<span><img src="/img/logo.svg" alt=""></span>
 							Teamwork.uz 
 						</a>	
 					</div>
@@ -275,15 +276,15 @@
 
 	<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+	 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 	<script type="text/javascript" src="/js/multi-countdown.js"></script>
 	<script type="text/javascript" src="/js/plugins.js"></script>
 	<script type="text/javascript" src="/js/animation.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
 	</div>
-	
+	@livewireScripts
 	<!-- Developed by  mr.khikmatulloh@mail.ru -->
 </body>
 </html>
