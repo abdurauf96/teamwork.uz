@@ -72,7 +72,9 @@ class SiteController extends Controller
         Meta::prependTitle($service['name_'.\App::getLocale()]);
         Meta::setDescription($service->seo_desc);
         Meta::setKeywords($service->seo_keyword);
-        return view('viewService', compact('service'));
+
+        $other_projects=\App\Models\ServiceProject::where('service_id', $service->id)->get();
+        return view('viewService', compact('service', 'other_projects'));
     }
 
     public function viewFeature($slug)

@@ -65,34 +65,15 @@
             <div class="block-slug">Bizning tajribali mutaxassislarimiz tomonidan yaratilgan loyihalar bilan tanishing</div>
         
             <div class="done-project-sl owl-carousel">
-                <a href="work1.html" class="done-project-item">
-                    <div class="done-project-item__img"><img src="/img/done.jpg" alt=""></div>
+                @foreach ($other_projects as $pro)
+                <a href="{{ $pro->link }}" class="done-project-item">
+                    <div class="done-project-item__img"><img src="/admin/images/{{ $pro->image }}" alt=""></div>
                     <div class="done-project-item__main">
-                        <div class="done-project-item__title">Turkish Medical</div>
-                        <div class="done-project-item__autor">Dizayner: Xurshid Istamov</div>
+                        <div class="done-project-item__title">{{ $pro['name_'.\App::getLocale()] }}</div>
+                        <div class="done-project-item__autor">{{ $pro['desc_'.\App::getLocale()] }}</div>
                     </div>
                 </a>
-                <a href="work1.html" class="done-project-item">
-                    <div class="done-project-item__img"><img src="/img/done1.jpg" alt=""></div>
-                    <div class="done-project-item__main">
-                        <div class="done-project-item__title">Turkish Medical</div>
-                        <div class="done-project-item__autor">Dizayner: Xurshid Istamov</div>
-                    </div>
-                </a>
-                <a href="work1.html" class="done-project-item">
-                    <div class="done-project-item__img"><img src="/img/done2.jpg" alt=""></div>
-                    <div class="done-project-item__main">
-                        <div class="done-project-item__title">Turkish Medical</div>
-                        <div class="done-project-item__autor">Dizayner: Xurshid Istamov</div>
-                    </div>
-                </a>
-                <a href="work1.html" class="done-project-item">
-                    <div class="done-project-item__img"><img src="/img/done1.jpg" alt=""></div>
-                    <div class="done-project-item__main">
-                        <div class="done-project-item__title">Turkish Medical</div>
-                        <div class="done-project-item__autor">Dizayner: Xurshid Istamov</div>
-                    </div>
-                </a>
+                @endforeach
 
             </div>
 
