@@ -32,6 +32,11 @@ class AppServiceProvider extends ServiceProvider
             $personals=\App\Models\Personal::all();
             $view->with(compact('personals'));
         });
+
+        view()->composer('sections.partners', function($view){
+            $partners=\App\Models\Partner::all();
+            $view->with(compact('partners'));
+        });
     }
 
     /**

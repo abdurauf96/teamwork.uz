@@ -16,8 +16,8 @@ class SiteController extends Controller
         Meta::setKeywords(['Awesome keyword', 'keyword2']);
         $proccesses=\App\Models\Proccess::orderBy('order')->get();
         $features=\App\Models\Feature::all();
-        
-        return view('welcome', compact('proccesses', 'features'));
+        $reviews=\App\Models\Review::where('main', 1)->get();
+        return view('welcome', compact('proccesses', 'features', 'reviews'));
     }
 
     public function about()
@@ -47,7 +47,9 @@ class SiteController extends Controller
 
     public function reviews()
     {
-        return view('reviews');
+        $reviews=\App\Models\Review::all();
+
+        return view('reviews', compact('reviews'));
     }
 
     public function contact()

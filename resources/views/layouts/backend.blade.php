@@ -13,6 +13,7 @@
     <!-- Theme style -->
     <link href="/admin/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <link href="/admin/css/my.css" rel="stylesheet" type="text/css" />
+    <link href="/raty/jquery.raty.css" rel="stylesheet" type="text/css" />
     
     <link href="/admin/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
     {{-- <link href="/admin/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css" /> --}}
@@ -151,8 +152,9 @@
     <!-- AdminLTE App -->
     <script src="/admin/js/app.min.js" type="text/javascript"></script>
     <script src="/admin/js/my.js" type="text/javascript"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.2/js/fileinput.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.2/themes/explorer/theme.min.css'></script>
+    <script src="/raty/jquery.raty.js" type="text/javascript"></script>
+    {{-- <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.2/js/fileinput.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.2/themes/explorer/theme.min.css'></script> --}}
     {{-- <script src="/js/jquery.dataTables.js" type="text/javascript"></script>
     <script src="/js/dataTables.bootstrap.js" type="text/javascript"></script> --}}
   

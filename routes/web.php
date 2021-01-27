@@ -60,3 +60,5 @@ Route::resource('admin/projects', '\App\Http\Controllers\Admin\ProjectsControlle
 Route::resource('admin/personals', '\App\Http\Controllers\Admin\PersonalsController');
 Route::resource('admin/proccesses', '\App\Http\Controllers\Admin\ProccessesController');
 Route::resource('admin/features', '\App\Http\Controllers\Admin\FeaturesController');
+Route::resource('admin/reviews', '\App\Http\Controllers\Admin\ReviewsController');
+Route::resource('admin/partners', '\App\Http\Controllers\Admin\PartnersController');

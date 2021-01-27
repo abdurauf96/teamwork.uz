@@ -14,7 +14,7 @@
     </div>
     <div class="form-group{{ $errors->has('body_uz') ? 'has-error' : ''}}">
         {!! Form::label('body_uz', 'Body Uz', ['class' => 'control-label']) !!}
-        {!! Form::textarea('body_uz', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control body']) !!}
+        {!! Form::textarea('body_uz', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control crud-richtext']) !!}
         {!! $errors->first('body_uz', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
@@ -32,7 +32,7 @@
     </div>
     <div class="form-group{{ $errors->has('body_ru') ? 'has-error' : ''}}">
         {!! Form::label('body_ru', 'Body Ru', ['class' => 'control-label']) !!}
-        {!! Form::textarea('body_ru', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control body']) !!}
+        {!! Form::textarea('body_ru', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control crud-richtext']) !!}
         {!! $errors->first('body_ru', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
@@ -50,7 +50,7 @@
     </div>
     <div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
         {!! Form::label('body_en', 'Body En', ['class' => 'control-label']) !!}
-        {!! Form::textarea('body_en', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control body']) !!}
+        {!! Form::textarea('body_en', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control crud-richtext']) !!}
         {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
     </div>
 </div>

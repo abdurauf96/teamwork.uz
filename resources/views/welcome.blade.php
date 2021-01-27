@@ -10,6 +10,6 @@
     @include('sections.success')
     @include('sections.proccess')
     @include('sections.partners')
-    @include('sections.reviews')
+    @include('sections.reviews', ['reviews'=>$reviews])
     @include('sections.form2')
 @endsection

@@ -3,12 +3,12 @@
 @section('content')
     <div class="container">
         <div class="row">
-         
+
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Edit Feature #{{ $feature->id }}</div>
+                    <div class="card-header">Edit Review #{{ $review->id }}</div>
                     <div class="card-body">
-                        <a href="{{ url('/admin/features') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/admin/reviews') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 
@@ -20,14 +20,14 @@
                             </ul>
                         @endif
 
-                        {!! Form::model($feature, [
+                        {!! Form::model($review, [
                             'method' => 'PATCH',
-                            'url' => ['/admin/features', $feature->id],
+                            'url' => ['/admin/reviews', $review->id],
                             'class' => 'form-horizontal',
                             'files' => true
                         ]) !!}
 
-                        @include ('admin.features.form', ['formMode' => 'edit'])
+                        @include ('admin.reviews.form', ['formMode' => 'edit'])
 
                         {!! Form::close() !!}
 
@@ -36,4 +36,13 @@
             </div>
         </div>
     </div>
+@endsection
+@section('js')
+    <script>
+        $('.star').raty({ 
+            click: function(number) {
+                $('.star_input').val(number);
+            }
+        });
+    </script>
 @endsection
