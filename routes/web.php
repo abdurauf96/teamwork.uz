@@ -21,6 +21,7 @@ Route::get('/reviews', [SiteController::class, 'reviews'])->name('reviews');
 Route::get('/contact', [SiteController::class, 'contact'])->name('contact');
 Route::get('/services', [SiteController::class, 'services'])->name('services');
 Route::get('/service/{slug}', [SiteController::class, 'viewService'])->name('viewService');
+Route::get('/feature/{slug}', [SiteController::class, 'viewFeature'])->name('viewFeature');
 
 Route::get('/locale/{locale}', function ($locale) {
    session(['locale'=>$locale]);
@@ -58,3 +59,4 @@ Route::resource('admin/portfolio-categories', '\App\Http\Controllers\Admin\Portf
 Route::resource('admin/projects', '\App\Http\Controllers\Admin\ProjectsController');
 Route::resource('admin/personals', '\App\Http\Controllers\Admin\PersonalsController');
 Route::resource('admin/proccesses', '\App\Http\Controllers\Admin\ProccessesController');
+Route::resource('admin/features', '\App\Http\Controllers\Admin\FeaturesController');

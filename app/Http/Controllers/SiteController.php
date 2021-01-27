@@ -15,8 +15,9 @@ class SiteController extends Controller
         Meta::setDescription('Awesome page');
         Meta::setKeywords(['Awesome keyword', 'keyword2']);
         $proccesses=\App\Models\Proccess::orderBy('order')->get();
+        $features=\App\Models\Feature::all();
         
-        return view('welcome', compact('proccesses'));
+        return view('welcome', compact('proccesses', 'features'));
     }
 
     public function about()
@@ -70,5 +71,11 @@ class SiteController extends Controller
         Meta::setDescription($service->seo_desc);
         Meta::setKeywords($service->seo_keyword);
         return view('viewService', compact('service'));
+    }
+
+    public function viewFeature($slug)
+    {
+        $feature=\App\Models\Feature::whereSlug($slug)->first();
+        return view('viewFeature', compact('feature'));
     }
 }
