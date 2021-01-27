@@ -14,20 +14,7 @@
                     <div class="block-title text-left">Loyihangiz sifatli bo'lishini istaysizmi?</div>
                     <div class="block-slug text-left">Sizda topshiriq bormi? Uni darhol <br /> Teamwork.uz ga topshiring</div>
 
-                    <form action="#" class="mt-3">
-                        <div class="site-inp">
-                            <input type="text" placeholder="Ism">
-                        </div>
-                        <div class="site-inp">
-                            <input type="text" placeholder="Telefon">
-                        </div>
-
-                        <div class="form-faq mb-4 block-slug text-left">
-                            <span class="color-red">*</span> Sizning murojaatingiz qabul qilingandan so'ng biz siz bilan bog'lanamiz va sizga qo'limizdan kelgancha ko'maklashamiz...
-                        </div>
-
-                        <button class="btn-submit btn-more">Jo'natish </button>
-                    </form>
+                    @livewire('message')
                 </div>
             </div>
         </div>
