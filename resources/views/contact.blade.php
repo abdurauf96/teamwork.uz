@@ -1,5 +1,14 @@
 @extends('layouts.site')
 
+@section('breadcrumb')
+<x-breadcrumb >
+   
+    <x-slot name="active">
+        Biz bilan bog'lanish
+    </x-slot>
+</x-breadcrumb>
+@endsection
+
 @section('content')
 <main class="page-main">
 		
@@ -39,23 +48,7 @@
 
                 </div>
                 <div class="col-lg-5 col-md-6 col-12 mb-5">
-                    <form class="con-page-form" action="#">
-                        <div class="page-form-title">
-                            Ma'lumotlaringizni to'ldiring
-                        </div>
-                        <div class="page-form-inp">
-                            <input type="text" placeholder="Ism">
-                        </div>
-                        <div class="page-form-inp">
-                            <input type="text" placeholder="Telefon">
-                        </div>
-                        <div class="page-form-inp">
-                            <textarea name="XabarMatni" placeholder="Xabar matni"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn-more">Jo'natish <i class="ml-3 fas fa-paper-plane"></i></button>
-
-                    </form>
+                    @livewire('contact')
                 </div>
             </div>
         </div>

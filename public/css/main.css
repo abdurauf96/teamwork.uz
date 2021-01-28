@@ -3512,3 +3512,9 @@ li a {
   background: #CBFFF6 !important;
   color: #006C74 !important;
 } */
+#modalSucces{
+  z-index: 9999999999;
+}
+.error{
+  color: red;
+}

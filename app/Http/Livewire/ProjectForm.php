@@ -4,21 +4,15 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class Message extends Component
+class ProjectForm extends Component
 {
     public $name;
-    public $message;
     public $phone;
     public $email;
 
-    public function render()
-    {
-        return view('livewire.message');
-    }
-
     protected $messages = [
         'name.required' => 'The Name cannot be empty.',
-        'phone.required' => 'The Phone number cannot be empty.',
+        'phone.required' => 'The Phone cannot be empty.',
     ];
 
     protected $rules = [
@@ -26,16 +20,27 @@ class Message extends Component
         'phone' => 'required',
     ];
 
+    public function render()
+    {
+        return view('livewire.project-form');
+    }
+
     public function sendMessage()
     {
         $this->validate();
+
+        \App\Models\Message::create([
+            'name'=>$this->name,
+            'phone'=>$this->phone, 
+            'email'=>$this->email
+        ]);
         
-        \App\Models\Message::create(['name'=>$this->name, 'phone'=>$this->phone]);
         $message=<<<TEXT
         Murojat qoldirildi!
 
         Telefon: {$this->phone}
         Ismi: {$this->name}
+        Email: {$this->email}
 TEXT;
 
         $apiToken = "768420781:AAEzzh0nDnr3o067TNOBnafxm1QTe4fbilo";
@@ -47,6 +52,8 @@ TEXT;
 
         $this->name='';
         $this->phone='';
-    }
+        $this->email='';
+        
 
+    }
 }

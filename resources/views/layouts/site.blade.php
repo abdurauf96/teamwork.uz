@@ -254,20 +254,7 @@
 	             Loyihani boshlash uchun ma'lumotlaringizni kiriting
 	          </div>
 	
-	          <form action="#" class="mt-3">
-	            <div class="row">
-	              <div class="col-12 col-md-6 mb-3">
-	                <input type="text" placeholder="Ism">
-	              </div>
-	              <div class="col-12 col-md-6 mb-3">
-	                <input type="text" placeholder="Telefon">
-	              </div>
-	              <div class="col-12 mb-3">
-	                <input type="text" placeholder="Email">
-	              </div>
-	            </div>
-	            <button class="btn-submit btn-more" data-toggle="modal" data-target="#modalSucces">Jo'natish </button>
-	          </form>
+	          @livewire('project-form')
 	
 	        </div>
 	    </div>

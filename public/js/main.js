@@ -231,6 +231,15 @@ jQuery(document).ready(function($) {
       }, 1000);
     });
 
-
+    $('.send_message').click(function(){
+        var name=$(this).siblings('div').find('.form_name').val();
+        var phone=$(this).siblings('div').find('.form_phone').val();
+        if (name!='' && phone!=''){
+            $('#modalSucces').addClass('show');
+        }
+    })
+    $('.modal-close').click(function(){
+        $('#modalSucces').removeClass('show');
+    })
 
 });

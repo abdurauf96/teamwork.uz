@@ -8,9 +8,13 @@
         @error('phone') <span class="error">{{ $message }}</span> @enderror
     </div>
 
+    <div class="site-textarea">
+        <textarea name="textareaLoyiha" placeholder="loyiha haqida qisqacha" wire:model="message"></textarea>
+    </div>
+
     <div class="form-faq mb-4 block-slug text-left">
         <span class="color-red">*</span> Sizning murojaatingiz qabul qilingandan so'ng biz siz bilan bog'lanamiz va sizga qo'limizdan kelgancha ko'maklashamiz...
     </div>
 
-    <button   class="btn-submit send_message btn-more" >Jo'natish </button>
+    <button class="btn-submit send_message btn-more">Jo'natish </button>
 </form>
