@@ -29,7 +29,7 @@ class Service extends Model
      *
      * @var array
      */
-    protected $fillable = ['name_uz', 'name_ru', 'name_en', 'title_uz', 'title_ru', 'title_en', 'body_uz', 'body_ru', 'body_en', 'icon', 'seo_desc', 'seo_keyword', 'slug'];
+    protected $fillable = ['name_uz', 'name_ru', 'name_en', 'title_uz', 'title_ru', 'title_en', 'body_uz', 'body_ru', 'body_en', 'icon', 'seo_desc', 'seo_keyword', 'slug', 'footer'];
 
     public function types()
     {

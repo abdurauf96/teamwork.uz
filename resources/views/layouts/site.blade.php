@@ -78,7 +78,7 @@
 	
 					<div class="col-auto text-right">
 						<a href="#modalCallback" data-toggle="modal" data-target="#modalCallback" class="start-btn bordered d-none d-sm-inline-block">
-							Loyihani boshlash
+							@lang('messages.start')
 						</a>
 	
 						<a href="#" class="ml-3 burger-site">
@@ -94,9 +94,9 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-5 col-md-7 col-12 order-1 order-md-0">
-						<div class="header-slug" data-aos="fade-right" data-aos-duration="500">Zamonaviy loyihalar</div>
+						<div class="header-slug" data-aos="fade-right" data-aos-duration="500">{{ __('messages.modern') }}</div>
 						<h1 class="header-title" data-aos="fade-right" data-aos-duration="800">Teamwork.uz</h1>
-						<p class="header-txt" data-aos="fade-right" data-aos-duration="1000">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account.</p>
+						<p class="header-txt" data-aos="fade-right" data-aos-duration="1000">{{ setting('home_'.\App::getLocale()) }}</p>
 					</div>
 					<div class="col-lg-6 col-md-4 col-12 order-0 order-md-1">
 						<div class="header-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" >
@@ -112,7 +112,7 @@
 							</div>	
 						</div>
 						<div class="btn-slide" >
-							<a href="#about">YUQORIGA KO'TARING <span></span></a>
+							<a href="#about">@lang('messages.totop') <span></span></a>
 						</div>
 						
 					</div>
@@ -131,11 +131,9 @@
 		</button>
 		<nav class="mobile-nav">
 			<ul>
-				<li><a href="servises.html">Xizmatlar</a></li>
-				<li><a href="partfolio.html">Portfolio</a></li>
-				<li><a href="about.html">Biz haqimizda</a></li>
-				<li><a href="reviews.html">Sharhlar</a></li>
-				<li><a href="contacts.html">Bog'lanish</a></li>
+				@foreach ($menus as $item)
+					<li><a href="{{ $item->link }}">{{ $item['title_'.\App::getLocale()] }}</a></li>
+				@endforeach
 			</ul>
 		</nav>	
 	
@@ -154,35 +152,37 @@
 				
 				<div class="row">
 					<div class="col-lg-3 col-md-6 col-12 mb-4" data-aos="fade-up" data-aos-duration="300">
-						<div class="fot-top__title">Biz haqimizda</div>
-						<p class="about-p">Biz buyurtmachilarning muammolarini tezlikni, xavfsizlikni, narx va sifatga qulaylikni yaratamiz</p>
-						<a href="#" class="logo-fot"><img src="img/logo-fot.svg" alt="teamwork logo"></a>
+						<div class="fot-top__title">@lang('messages.aboutUs')</div>
+						<p class="about-p">{{ setting('footer_info_'.\App::getLocale()) }}</p>
+						<a href="/" class="logo-fot"><img src="img/logo-fot.svg" alt="teamwork logo"></a>
 	
 					</div>
 					<div class="col-lg-3 col-md-6 col-12 mb-4" data-aos="fade-up" data-aos-duration="300">
-						<div class="fot-top__title">Foydali havolalar</div>
+						<div class="fot-top__title">@lang('messages.useful')</div>
 						<ul class="fot-top-list">
-							<li><a href="service.html">Xizmatlar</a></li>
-							<li><a href="partfolio.html">Portfolio</a></li>
-							<li><a href="about.html">Biz haqimizda</a></li>
-							<li><a href="contact.html">Aloqa</a></li>
+							@foreach ($menus as $menu)
+								@if ($menu->footer==1)
+								<li><a href="{{ $menu->link }}">{{ $menu['title_'.\App::getLocale()] }}</a></li>
+								@endif
+							@endforeach
 						</ul>
 					</div>
 					<div class="col-lg-3 col-md-6 col-12 mb-4" data-aos="fade-up" data-aos-duration="300">
-						<div class="fot-top__title">Xizmatlar</div>
+						<div class="fot-top__title">@lang('messages.services')</div>
 						<ul class="fot-top-list">
-							<li><a href="web.html">Web dizayn</a></li>
-							<li><a href="mobil.html">Mobil ilovalar</a></li>
-							<li><a href="grafic.html">Grafik dizayn</a></li>
-							<li><a href="brandbook.html">Brandbook</a></li>
+							@foreach ($services as $s)
+							@if ($s->footer==1)
+							<li><a href="{{ route('viewService', $s->slug) }}">{{ $s['name_'.\App::getLocale()] }}</a></li>
+							@endif
+							@endforeach
 						</ul>
 					</div>
 					<div class="col-lg-3 col-md-6 col-12 mb-4" data-aos="fade-up" data-aos-duration="300">
-						<div class="fot-top__title">Kontaktlar</div>
+						<div class="fot-top__title">@lang('messages.contacts')</div>
 						<ul class="fot-top-list fot-top-list--contact">
-							<li><a href="https://goo.gl/maps/ijkUQ5VHwTgZan4n6">Toshkent shahri, Yunusobod tumani Amir Temur ko'chasi 108 </a></li>
-							<li><a href="tel:998907800660">+998 (90) 780 06 60</a></li>
-							<li><a href="tel:998907800660">+998 (90) 780 06 60</a></li>
+							<li><a href="https://goo.gl/maps/ijkUQ5VHwTgZan4n6">{{ setting('addres_'.\App::getLocale()) }}</a></li>
+							<li><a href="tel:{{ setting('phone1')}}">{{ setting('phone1')	 }}</a></li>
+							<li><a href="tel:{{ setting('phone2')}}">{{ setting('phone2')	 }}</a></li>
 							<li><a href="mailto:info@teamwork.uz">info@teamwork.uz</a></li>
 						</ul>
 					</div>
@@ -198,7 +198,7 @@
 				
 				<div class="row">
 					<div class="col-md-6 col-12 text-md-left text-center mb-3" data-aos="fade-right" data-aos-duration="300">
-						<a href="#" class="copyright">© Teamwork.uz 2020 - 2021. Barcha huquqlar himoyalangan</a>
+						<a href="#" class="copyright">© @lang('messages.reserved')</a>
 					</div>
 					<div class="col-md-6 col-12 text-md-right text-center mb-3" data-aos="fade-left" data-aos-duration="300">
 						<div class="fot-social">
@@ -225,11 +225,10 @@
 	            <img src="img/success.svg" alt="">
 	          </div>
 	           <div class="cal-mod__title">
-	             Xabaringiz jo'natildi!
+	             @lang('messages.sent')
 	          </div>
 	          <div class="cal-mod__txt mb-4">
-	            Tez orada bizning mutaxassislarimiz siz bilan
-	bog'lanishadi
+	            @lang('messages.sent2')
 	          </div>
 	        </div>
 	    </div>
@@ -248,10 +247,10 @@
 	            <img src="img/form-project-icon.svg" alt="">
 	          </div>
 	          <div class="cal-mod__title">
-	             Ma'lumotlaringizni kiriting
+	             @lang('messages.type')
 	          </div>
 	          <div class="cal-mod__txt">
-	             Loyihani boshlash uchun ma'lumotlaringizni kiriting
+	             @lang('messages.type2')
 	          </div>
 	
 	          @livewire('project-form')

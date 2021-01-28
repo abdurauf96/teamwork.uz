@@ -3,16 +3,15 @@
 @section('content')
     <div class="container">
         <div class="row">
-            @include('admin.sidebar')
-
-            <div class="col-md-9">
+           
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">Settings</div>
                     <div class="card-body">
                         <a href="{{ url('/admin/settings/create') }}" class="btn btn-success btn-sm" title="Add New Setting">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
-
+                        <hr>
                         {!! Form::open(['method' => 'GET', 'url' => '/admin/settings', 'class' => 'form-inline my-2 my-lg-0 float-right', 'role' => 'search'])  !!}
                         <div class="input-group">
                             <input type="text" class="form-control" name="search" placeholder="Search..." value="{{ request('search') }}">
@@ -30,17 +29,22 @@
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>Key</th><th>Value</th><th>Usage</th><th>Actions</th>
+                                        <th>Description</th>
+                                        
+                                        <th>Value</th>
+                                        <th>Usage</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($settings as $item)
                                     <tr>
-                                        <td>{{ $item->key }}</td>
-                                        <td>{{ $item->value }}</td>
-                                        <td><code>setting('{{ $item->key }}')</code></td>
+                                        <td width="300">{{ $item->description }}</td>
+                                        
+                                        <td width="500">{{ $item->value }}</td>
+                                        <td width="100"><code>setting('{{ $item->key }}')</code></td>
                                         <td>
-                                            <a href="{{ url('/admin/settings/' . $item->id) }}" title="View Setting"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i></button></a>
+                                            
                                             <a href="{{ url('/admin/settings/' . $item->id . '/edit') }}" title="Edit Setting"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></a>
                                             {!! Form::open([
                                                 'method' => 'DELETE',

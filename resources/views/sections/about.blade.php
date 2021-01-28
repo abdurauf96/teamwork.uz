@@ -43,27 +43,27 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="fr">
-                        <div class="block-title text-left">Bugungi kungi natijalar <br />(Biz haqimizda sonlarda) </div>
-                        <div class="block-slug text-left">Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</div>
+                        <div class="block-title text-left">{{ $blokabout['title_'.\App::getLocale()] }} </div>
+                        <div class="block-slug text-left">{{ $blokabout['desc_'.\App::getLocale()] }}</div>
                     </div>
 
                     <div class="progress-block mt--5 mb-5">
                         <div class="d-flex justify-content-between mb-2">
-                            <div class="progress-name">Qandaydir natija</div>
-                            <div class="progress-pros">95%</div>	
+                            <div class="progress-name">{{ $blokabout['result1_'.\App::getLocale()] }}</div>
+                            <div class="progress-pros">{{ $blokabout['value1'] }}%</div>	
                         </div>
                         <div class="progress">
-                          <div class="progress-bar blue-gradient" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                          <div class="progress-bar blue-gradient" role="progressbar" style="width: {{ $blokabout['value1'] }}%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
 
                     <div class="progress-block mb-5">
                         <div class="d-flex justify-content-between mb-2">
-                            <div class="progress-name">Qandaydir natija</div>
-                            <div class="progress-pros">100%</div>	
+                            <div class="progress-name">{{ $blokabout['result2_'.\App::getLocale()] }}</div>
+                            <div class="progress-pros">{{ $blokabout['value2'] }}%</div>	
                         </div>
                         <div class="progress">
-                          <div class="progress-bar red-gradient" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                          <div class="progress-bar red-gradient" role="progressbar" style="width: {{ $blokabout['value2'] }}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
 
@@ -73,22 +73,13 @@
                 <div class="col-lg-6">
                     
                     <div class="count-bl">
+                        @foreach ($numbers as $num)
                         <div class="count-bl-item">
-                            <div class="count-bl-item__num color-red">1420</div>
-                            <div class="count-bl-item__txt">Topshirilgan loyihalar</div>
+                            <div class="count-bl-item__num color-{{ $num->color }}">{{ $num->number }}</div>
+                            <div class="count-bl-item__txt">{{ $num['title_'.\App::getLocale()] }}</div>
                         </div>
-                        <div class="count-bl-item">
-                            <div class="count-bl-item__num color-blue">1210</div>
-                            <div class="count-bl-item__txt">Tajribali mutaxassislar</div>
-                        </div>
-                        <div class="count-bl-item">
-                            <div class="count-bl-item__num color-green">750</div>
-                            <div class="count-bl-item__txt">Hamkorlar</div>
-                        </div>
-                        <div class="count-bl-item">
-                            <div class="count-bl-item__num color-magenta">2140</div>
-                            <div class="count-bl-item__txt">Mamnun mijozlar</div>
-                        </div>
+                        @endforeach
+                        
                     </div>
 
                 </div>

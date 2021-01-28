@@ -14,10 +14,15 @@ class SiteController extends Controller
         Meta::prependTitle('Bosh Sahifa');
         Meta::setDescription('Awesome page');
         Meta::setKeywords(['Awesome keyword', 'keyword2']);
+
         $proccesses=\App\Models\Proccess::orderBy('order')->get();
         $features=\App\Models\Feature::all();
         $reviews=\App\Models\Review::where('main', 1)->get();
-        return view('welcome', compact('proccesses', 'features', 'reviews'));
+        $blokservice=\App\Models\BlokService::first();
+        $blokfeature=\App\Models\BlokFeature::first();
+        
+        
+        return view('welcome', compact('proccesses', 'features', 'reviews', 'blokservice', 'blokfeature'));
     }
 
     public function about()
@@ -60,6 +65,12 @@ class SiteController extends Controller
     public function services()
     {
         $services=\App\Models\Service::all();
+        $blokservice=\App\Models\BlokService::first();
+
+        Meta::prependTitle($blokservice['title_'.\App::getLocale()]);
+        Meta::setDescription($blokservice->seo_desc);
+        Meta::setKeywords($blokservice->seo_keyword);
+
         return view('services', compact('services'));
     }
 
@@ -80,6 +91,10 @@ class SiteController extends Controller
     public function viewFeature($slug)
     {
         $feature=\App\Models\Feature::whereSlug($slug)->first();
-        return view('viewFeature', compact('feature'));
+        $blokfeature=\App\Models\BlokFeature::first();
+        Meta::prependTitle($feature['title_'.\App::getLocale()]);
+        Meta::setDescription($blokfeature->seo_desc);
+        Meta::setKeywords($blokfeature->seo_keyword);
+        return view('viewFeature', compact('feature', 'blokfeature'));
     }
 }

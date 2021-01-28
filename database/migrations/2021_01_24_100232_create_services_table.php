@@ -28,6 +28,7 @@ class CreateServicesTable extends Migration
             $table->string('slug')->unique();
             $table->text('seo_desc')->nullable();
             $table->text('seo_keyword')->nullable();
+            $table->integer('footer')->nullable();
             });
     }
 

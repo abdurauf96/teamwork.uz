@@ -1,7 +1,7 @@
 <section class="ourWork">
     <div class="container">
-        <h3 class="block-title" data-aos="fade-up" data-aos-duration="500">Bizning xizmatlar</h3>
-        <div class="block-slug" data-aos="fade-up" data-aos-duration="700">10000 dan ziyod mutaxassislar sizga har xil topshiriqlar yechimida yordam berishga tayyor</div>
+        <h3 class="block-title" data-aos="fade-up" data-aos-duration="500">{{ $blokservice['title_'.\App::getLocale()] }}</h3>
+        <div class="block-slug" data-aos="fade-up" data-aos-duration="700">{{ $blokservice['desc_'.\App::getLocale()] }}</div>
 
         <div class="row ow-bl">
             @foreach ($services as $service)
@@ -33,7 +33,7 @@
             <div class="col-lg-6">
                 
                 <div class="fr-img">
-                    <img src="/img/form-img.png" alt="">
+                    <img src="/admin/images/{{ setting('form1_img')	 }}" alt="">
                 </div>
                 <!-- fr img block end -->
 

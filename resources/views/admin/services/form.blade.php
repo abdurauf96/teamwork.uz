@@ -74,7 +74,11 @@
     {!! $errors->first('seo_keyword', '<p class="help-block">:message</p>') !!}
 </div>
 
-
+<div class="form-group{{ $errors->has('main') ? 'has-error' : ''}}">
+    {!! Form::label('main', 'Footer', ['class' => 'control-label']) !!}
+    {!! Form::checkbox('footer', 1, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control']) !!}
+    {!! $errors->first('main', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group">
     {!! Form::submit($formMode === 'edit' ? 'Update' : 'Create', ['class' => 'btn btn-primary']) !!}
 </div>

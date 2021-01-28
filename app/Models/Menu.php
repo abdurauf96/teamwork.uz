@@ -29,7 +29,7 @@ class Menu extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'link', 'order'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'link', 'order', 'footer'];
 
     
 

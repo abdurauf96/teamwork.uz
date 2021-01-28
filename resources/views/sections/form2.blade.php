@@ -13,7 +13,7 @@
             <div class="col-lg-6 mt-md-0 mt-5">
                 
                 <div class="" data-aos="fade-left" data-aos-duration="300">
-                    <img src="img/accordian-image.png" alt="">
+                    <img src="/admin/images/{{ setting('form3_img') }}" alt="">
                 </div>
                 <!-- fr img block end -->
 

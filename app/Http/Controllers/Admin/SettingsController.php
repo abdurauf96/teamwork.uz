@@ -50,15 +50,15 @@ class SettingsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate(
-            $request,
-            [
-                'key' => 'required|string|unique:settings',
-                'value' => 'required'
-            ]
-        );
-
+        
         $requestData = $request->all();
+        if($request->hasFile('image')){
+            $file=$request->file('image');
+            $image=time().$file->getClientOriginalName();
+            $file->move('admin/images', $image);
+            $requestData['value']=$image;
+        }
+        
 
         Setting::create($requestData);
 
@@ -103,15 +103,14 @@ class SettingsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate(
-            $request,
-            [
-                'key' => 'required|string|unique:settings,key,' . $id,
-                'value' => 'required'
-            ]
-        );
+        
         $requestData = $request->all();
-
+        if($request->hasFile('image')){
+            $file=$request->file('image');
+            $image=time().$file->getClientOriginalName();
+            $file->move('admin/images', $image);
+            $requestData['value']=$image;
+        }
         $setting = Setting::findOrFail($id);
         $setting->update($requestData);
 

@@ -20,6 +20,7 @@ class CreateMenusesTable extends Migration
             $table->string('title_en')->nullable();
             $table->string('link')->nullable();
             $table->string('order')->nullable();
+            $table->string('footer')->nullable();
             });
     }
 

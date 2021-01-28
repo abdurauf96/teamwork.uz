@@ -15,12 +15,22 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer('layouts.site', function($view){
             $menus=\App\Models\Menu::orderBy('order')->get();
-            $view->with(compact('menus'));
+            $services=\App\Models\Service::all();
+            $view->with(compact('menus', 'services'));
         });
 
         view()->composer('sections.about', function($view){
             $about=\App\Models\About::first();
-            $view->with(compact('about'));
+            $blokabout=\App\Models\BlokAbout::first();
+            $numbers=\App\Models\Number::all();
+            $view->with(compact('about','blokabout','numbers'));
+        });
+
+        view()->composer('sections.success', function($view){
+           
+            $blokabout=\App\Models\BlokAbout::first();
+            $numbers=\App\Models\Number::all();
+            $view->with(compact('blokabout','numbers'));
         });
 
         view()->composer('sections.services', function($view){

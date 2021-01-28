@@ -64,3 +64,7 @@ Route::resource('admin/reviews', '\App\Http\Controllers\Admin\ReviewsController'
 Route::resource('admin/partners', '\App\Http\Controllers\Admin\PartnersController');
 Route::resource('admin/service-projects', '\App\Http\Controllers\Admin\ServiceProjectsController');
 Route::resource('admin/messages', '\App\Http\Controllers\Admin\MessagesController');
+Route::resource('admin/blok-service', '\App\Http\Controllers\Admin\BlokServiceController');
+Route::resource('admin/blok-feature', '\App\Http\Controllers\Admin\BlokFeatureController');
+Route::resource('admin/blok-about', '\App\Http\Controllers\Admin\BlokAboutController');
+Route::resource('admin/numbers', '\App\Http\Controllers\Admin\NumbersController');

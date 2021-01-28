@@ -1,7 +1,7 @@
 <section class="avantage">
     <div class="container">
-        <h3 class="block-title">Bizning afzalliklar</h3>
-        <div class="block-slug mb-5">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual</div>
+        <h3 class="block-title">{{ $blokfeature['title_'.\App::getLocale()] }}</h3>
+        <div class="block-slug mb-5">{{ $blokfeature['desc_'.\App::getLocale()] }}</div>
 
         <div class="row">
             @foreach ($features as $feature)

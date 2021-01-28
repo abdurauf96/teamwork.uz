@@ -4,7 +4,7 @@
             <div class="col-lg-6 mb-md-0 mb-5">
                 
                 <div class="" data-aos="fade-right" data-aos-duration="500">
-                    <img src="img/Image.jpg" alt="">
+                    <img src="/admin/images/{{ setting('form2_img') }}" alt="">
                 </div>
                 <!-- fr img block end -->
 

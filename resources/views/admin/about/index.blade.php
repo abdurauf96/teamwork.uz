@@ -33,8 +33,7 @@
                                         <th>#</th>
                                         <th>Main Title</th>
                                         <th>Main description</th>
-                                        <th>Second Title</th>
-                                        <th>Second description</th>
+                                       
                                         <th>Image</th>
                                         <th>Link (Video)</th>
                                         <th>Actions</th>
@@ -46,8 +45,7 @@
                                         <td>{{ $loop->iteration or $item->id }}</td>
                                         <td>{{ $item['main_title_'.\App::getLocale()] }}</td>
                                         <td>{{ $item['main_desc_'.\App::getLocale()] }}</td>
-                                        <td>{{ $item['second_title_'.\App::getLocale()] }}</td>
-                                        <td>{{ $item['second_desc_'.\App::getLocale()] }}</td>
+                                       
                                         <td><img width="80" src="/admin/images/{{ $item->image }}" alt=""></td>
                                         <td>{{ $item['link'] }}</td>
                                         <td>
