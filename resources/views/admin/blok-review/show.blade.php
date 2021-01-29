@@ -1,0 +1,52 @@
+@extends('layouts.backend')
+
+@section('content')
+    <div class="container">
+        <div class="row">
+         
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header">BlokReview {{ $blokreview->id }}</div>
+                    <div class="card-body">
+
+                        <a href="{{ url('/admin/blok-review') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/admin/blok-review/' . $blokreview->id . '/edit') }}" title="Edit BlokReview"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                        {!! Form::open([
+                            'method'=>'DELETE',
+                            'url' => ['admin/blokreview', $blokreview->id],
+                            'style' => 'display:inline'
+                        ]) !!}
+                            {!! Form::button('<i class="fa fa-trash-o" aria-hidden="true"></i> Delete', array(
+                                    'type' => 'submit',
+                                    'class' => 'btn btn-danger btn-sm',
+                                    'title' => 'Delete BlokReview',
+                                    'onclick'=>'return confirm("Confirm delete?")'
+                            ))!!}
+                        {!! Form::close() !!}
+                        <br/>
+                        <br/>
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th>ID</th><td>{{ $blokreview->id }}</td>
+                                    </tr>
+                                    <tr><th> Title Uz </th><td> {{ $blokreview->title_uz }} </td></tr>
+                                    <tr><th> Description Uz </th><td> {{ $blokreview->desc_uz }} </td></tr>
+                                    <tr><th> Title Ru </th><td> {{ $blokreview->title_ru }} </td></tr>
+                                    <tr><th> Description Ru </th><td> {{ $blokreview->desc_ru }} </td></tr>
+                                    <tr><th> Title en </th><td> {{ $blokreview->title_en }} </td></tr>
+                                    <tr><th> Description en </th><td> {{ $blokreview->desc_en }} </td></tr>
+                                    <tr><th> SEO Description  </th><td> {{ $blokreview->seo_desc }} </td></tr>
+                                    <tr><th> SEO Keyword </th><td> {{ $blokreview->seo_keyword }} </td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection

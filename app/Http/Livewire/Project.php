@@ -8,11 +8,13 @@ class Project extends Component
 {
     public $projects;
     public $categories;
+    public $portfolio;
     
     public function mount()
     {
         $this->categories=\App\Models\PortfolioCategory::all();
         $this->projects=\App\Models\Project::all();
+        $this->portfolio=\App\Models\BlokPortfolio::first();
     }
 
     public function render()

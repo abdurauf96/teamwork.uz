@@ -1,8 +1,8 @@
 <div class="row align-items-end justify-content-between">
     <div class="col-lg-4 col-12">
         <div class="part-hash color-orange mb-3">#PORTFOLIO </div>
-        <h3 class="block-title text-left">Bizning loyihalar</h3>
-        <p class="color-dark mb-0">Sizda topshiriq bormi? Uni darhol Teamwork.uz ga topshiring</p>
+        <h3 class="block-title text-left">{{ $portfolio['title_'.\App::getLocale()] }}</h3>
+        <p class="color-dark mb-0">{{ $portfolio['desc_'.\App::getLocale()] }}</p>
     </div>
 
     <div class="col-lg-5 col-12">

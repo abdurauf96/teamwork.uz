@@ -40,15 +40,18 @@ class AppServiceProvider extends ServiceProvider
 
         view()->composer('sections.team', function($view){
             $personals=\App\Models\Personal::all();
-            $view->with(compact('personals'));
+            $blokteam=\App\Models\BlokTeam::first();
+            $view->with(compact('personals', 'blokteam'));
         });
 
         view()->composer('sections.partners', function($view){
             $partners=\App\Models\Partner::all();
-            $view->with(compact('partners'));
+            $blokpartner=\App\Models\BlokPartner::first();
+            $view->with(compact('partners', 'blokpartner'));
         });
+        
     }
-
+    
     /**
      * Bootstrap any application services.
      *

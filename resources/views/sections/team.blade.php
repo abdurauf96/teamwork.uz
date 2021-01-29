@@ -1,7 +1,7 @@
 <section class="ourteam">
     <div class="container">
-        <div class="block-title">Bizning jamoa</div>
-        <div class="block-slug">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I  will give you a complete account of the system, and expound the actual</div>
+        <div class="block-title">{{ $blokteam['title_'.\App::getLocale()] }}</div>
+        <div class="block-slug">{{ $blokteam['desc_'.\App::getLocale()] }}</div>
 
         <div class="ourteam-sl owl-carousel">
             @foreach ($personals as $personal)

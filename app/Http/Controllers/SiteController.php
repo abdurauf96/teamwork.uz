@@ -16,13 +16,15 @@ class SiteController extends Controller
         Meta::setKeywords(['Awesome keyword', 'keyword2']);
 
         $proccesses=\App\Models\Proccess::orderBy('order')->get();
+        $blokprocces=\App\Models\Blokprocce::first();
         $features=\App\Models\Feature::all();
         $reviews=\App\Models\Review::where('main', 1)->get();
+        $blokreview=\App\Models\BlokReview::first();
         $blokservice=\App\Models\BlokService::first();
         $blokfeature=\App\Models\BlokFeature::first();
         
         
-        return view('welcome', compact('proccesses', 'features', 'reviews', 'blokservice', 'blokfeature'));
+        return view('welcome', compact('proccesses', 'features', 'reviews', 'blokservice', 'blokfeature', 'blokprocces', 'blokreview'));
     }
 
     public function about()
@@ -32,9 +34,14 @@ class SiteController extends Controller
 
     public function portfolio()
     {
+        $blokportfolio=\App\Models\BlokPortfolio::first();
         $projects=\App\Models\Project::all();
+        Meta::prependTitle($blokportfolio['title_'.\App::getLocale()]);
+        Meta::setDescription($blokportfolio->seo_desc);
+        Meta::setKeywords($blokportfolio->seo_keyword);
         $categories=\App\Models\PortfolioCategory::all();
-        return view('portfolio', compact('projects', 'categories'));
+        
+        return view('portfolio', compact('projects', 'categories', 'blokportfolio'));
     }
 
     public function viewPortfolio($slug)
@@ -53,8 +60,11 @@ class SiteController extends Controller
     public function reviews()
     {
         $reviews=\App\Models\Review::all();
-
-        return view('reviews', compact('reviews'));
+        $blokreview=\App\Models\BlokReview::first();
+        Meta::prependTitle($blokreview['title_'.\App::getLocale()]);
+        Meta::setDescription($blokreview->seo_desc);
+        Meta::setKeywords($blokreview->seo_keyword);
+        return view('reviews', compact('reviews', 'blokreview'));
     }
 
     public function contact()

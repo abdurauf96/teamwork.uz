@@ -3,7 +3,7 @@
 @section('breadcrumb')
 <x-breadcrumb >
     <x-slot name="parent">
-        <li><a href="/services">Portfolio</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
     </x-slot>
     <x-slot name="active">
         {{ $project['title_'.\App::getLocale()] }}
