@@ -4,7 +4,7 @@
 <x-breadcrumb >
    
     <x-slot name="active">
-        Biz bilan bog'lanish
+        @lang('messages.contactUs')
     </x-slot>
 </x-breadcrumb>
 @endsection
@@ -18,7 +18,7 @@
             <div class="row justify-content-md-between pb-5">
                 <div class="col-lg-5 col-md-6 col-12 mb-5">
                     
-                    <div class="block-title text-left contact-page__title">Biz bilan bog'lanish</div>
+                    <div class="block-title text-left contact-page__title">@lang('messages.contactUs')</div>
                     <div class="block-slug mt-2 text-left">{{ setting('about_'.\App::getLocale()) }}</div>
 
                     <div class="con-page-bl mt-5">

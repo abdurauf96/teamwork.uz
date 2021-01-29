@@ -11,8 +11,8 @@
             </div>
             <div class="col-lg-6">
                 <div class="fr" data-aos="fade-left" data-aos-duration="500">
-                    <div class="block-title text-left">Loyihangiz sifatli bo'lishini istaysizmi?</div>
-                    <div class="block-slug text-left">Sizda topshiriq bormi? Uni darhol <br /> Teamwork.uz ga topshiring</div>
+                    <div class="block-title text-left">@lang('messages.pro_title')</div>
+                    <div class="block-slug text-left">@lang('messages.pro_desc')</div>
 
                     @livewire('message')
                 </div>

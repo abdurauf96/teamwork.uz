@@ -3,7 +3,7 @@
 @section('breadcrumb')
 <x-breadcrumb >
     <x-slot name="active">
-        Mijozlarimiz fikrlari
+        {{ $blokreview['title_'.\App::getLocale()] }}
     </x-slot>
 </x-breadcrumb>
 @endsection

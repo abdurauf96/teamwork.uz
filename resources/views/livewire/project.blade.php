@@ -30,14 +30,15 @@
                     </span>
                     <span class="tb-it__main magenta-gradient">
                         <b>{{ $project->category['name_'.\App::getLocale()] }}</b>
-                        <span>Created by {{ $project->author }}</span>
+                        <span> @lang('messages.created')
+                        {{ $project->author }}</span>
                     </span>
                 </a>
             </div>
             @endforeach 
         </div>
 
-        <a href="/portfolio" class="btn-more m-auto">Barchasi</a>
+        <a href="/portfolio" class="btn-more m-auto">@lang('messages.all')</a>
 
     </div>
 </div>

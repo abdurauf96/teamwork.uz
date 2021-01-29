@@ -1,1 +1,51 @@
-{"menus":[{"section":"Resources","items":[{"title":"Users","url":"\/admin\/users"},{"title":"Roles","url":"\/admin\/roles"},{"title":"Permissions","url":"\/admin\/permissions"},{"title":"Pages","url":"\/admin\/pages"},{"title":"Activity Logs","url":"\/admin\/activitylogs"},{"title":"Settings","url":"\/admin\/settings"},{"title":"Menus","url":"\/admin\/menus"},{"title":"About","url":"\/admin\/about"},{"title":"Services","url":"\/admin\/services"},{"title":"ServiceTypes","url":"\/admin\/service-types"},{"title":"ServiceTechnologies","url":"\/admin\/service-technologies"},{"title":"PortfolioCategories","url":"\/admin\/portfolio-categories"},{"title":"Projects","url":"\/admin\/projects"},{"title":"Personals","url":"\/admin\/personals"},{"title":"Proccesses","url":"\/admin\/proccesses"},{"title":"Features","url":"\/admin\/features"},{"title":"Reviews","url":"\/admin\/reviews"},{"title":"Partners","url":"\/admin\/partners"},{"title":"ServiceProjects","url":"\/admin\/service-projects"},{"title":"Messages","url":"\/admin\/messages"},{"title":"BlokService","url":"\/admin\/blok-service"},{"title":"BlokFeature","url":"\/admin\/blok-feature"},{"title":"BlokAbout","url":"\/admin\/blok-about"},{"title":"Numbers","url":"\/admin\/numbers"},{"title":"BlokProcces","url":"\/admin\/blok-procces"},{"title":"BlokPartner","url":"\/admin\/blok-partner"},{"title":"BlokReview","url":"\/admin\/blok-review"},{"title":"BlokTeam","url":"\/admin\/blok-team"},{"title":"BlokPortfolio","url":"\/admin\/blok-portfolio"}]},{"section":"Tools","items":[{"title":"Generator","url":"\/admin\/generator"}]}]}
+{"menus":[
+        {"section":"Asosiy","items":[
+            
+            
+            {"title":"Menyular","url":"\/admin\/menus"},
+            
+            
+            {"title":"Loyiha uchun kategoriyalar","url":"\/admin\/portfolio-categories"},
+            {"title":"Loyihalar ","url":"\/admin\/projects"},
+            {"title":"Bizning jamoa","url":"\/admin\/personals"},
+            {"title":"Biz bilan ishlash juda oson","url":"\/admin\/proccesses"},
+            {"title":"Bizning afzalliklar","url":"\/admin\/features"},
+            {"title":"Mijozlar fikrlari","url":"\/admin\/reviews"},
+            {"title":"Xamkorlar","url":"\/admin\/partners"},
+           
+            {"title":"Murojatlar","url":"\/admin\/messages"},
+            {"title":"Statik so'zlar","url":"\/admin\/settings"}
+            
+            
+        ]},
+
+        
+        {"section":"Xizmatlar","items":[
+            {"title":"Bizning xizmatlar","url":"\/admin\/services"},
+            {"title":"Xizmatga oid loyihalar","url":"\/admin\/service-projects"},
+            {"title":"Xizmat turlari","url":"\/admin\/service-types"},
+            {"title":"Xizmat uchun texnologiyalar","url":"\/admin\/service-technologies"}
+        ]
+        },
+        {"section":"Biz haqimizda","items":[
+            {"title":"Biz haqimizda blok","url":"\/admin\/about"},
+            {"title":"Bugungi kungi natijalar","url":"\/admin\/blok-about"},
+            {"title":"Biz haqimizda sonlarda","url":"\/admin\/numbers"}
+        ]
+        },
+        {"section":"Bloklarga SEO va sarlavhalar","items":[
+            
+            {"title":"Xizmatlar","url":"\/admin\/blok-service"},
+            {"title":"Bizning afzalliklar","url":"\/admin\/blok-feature"},
+            
+            {"title":"Biz bilan ishlash juda oson","url":"\/admin\/blok-procces"},
+            {"title":"Xamkorlar","url":"\/admin\/blok-partner"},
+            {"title":"Mijozlar fikri","url":"\/admin\/blok-review"},
+            {"title":"Bizning jamoa","url":"\/admin\/blok-team"},
+            {"title":"Portfolio","url":"\/admin\/blok-portfolio"}
+        ]
+        }
+        
+    ]
+    
+}

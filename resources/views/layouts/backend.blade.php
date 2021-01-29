@@ -60,9 +60,9 @@
                  
                   <!-- Menu Footer-->
                   <li class="user-footer">
-                    <div class="pull-left">
+                    {{-- <div class="pull-left">
                       <a href="#" class="btn btn-default btn-flat">Профиль</a>
-                    </div>
+                    </div> --}}
                     <div class="pull-right">
                       <a href="{{ route('logout') }}" class="btn btn-default btn-flat"   onclick="event.preventDefault();
                       document.getElementById('logout-form').submit();">Выйти</a>
@@ -81,7 +81,7 @@
       <!-- =============================================== -->
 
       <!-- Left side column. contains the sidebar -->
-      <aside class="main-sidebar">
+      <aside class="main-sidebar"  >
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
           <!-- Sidebar user panel -->
@@ -90,7 +90,7 @@
               <img src="/admin/images/admin.jpg" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
-              <p>Абдурауф Сайдалиев</p>
+              <p>Muhammad Mamasoliyev</p>
 
               <a href="#"><i class="fa fa-circle text-success"></i> Online </a>
             </div>

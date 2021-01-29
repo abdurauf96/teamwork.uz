@@ -4,7 +4,7 @@
 <x-breadcrumb >
    
     <x-slot name="active">
-        Biz haqimizda
+        @lang('messages.aboutUs')
     </x-slot>
 </x-breadcrumb>
 @endsection

@@ -29,7 +29,7 @@ class BlokAbout extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'desc_uz', 'title_ru', 'desc_ru', 'title_en', 'desc_en', 'result1_uz', 'result1_ru', 'result1_en', 'result2_uz', 'result2_ru', 'result2_en', 'value1', 'value2'];
+    protected $fillable = ['title_uz', 'desc_uz', 'title_ru', 'desc_ru', 'title_en', 'desc_en', 'result1_uz', 'result1_ru', 'result1_en', 'result2_uz', 'result2_ru', 'result2_en', 'value1', 'value2', 'seo_desc'. 'seo_keyword'];
 
     
 

@@ -35,7 +35,8 @@ class AppServiceProvider extends ServiceProvider
 
         view()->composer('sections.services', function($view){
             $services=\App\Models\Service::all();
-            $view->with(compact('services'));
+            $blokservice=\App\Models\BlokService::first();
+            $view->with(compact('services','blokservice'));
         });
 
         view()->composer('sections.team', function($view){

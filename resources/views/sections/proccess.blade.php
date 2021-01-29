@@ -17,7 +17,7 @@
                         <img src="/admin/images/{{ $blokprocces['image'] }}" alt="#" class="man-image">
                         <div class="ishlash-bot">
                             <img src="img/payment-method.svg" alt="">
-                            <div class="ishlash-bot__txt">Biz esa mutaxassisga xizmat narxini to’lab beramiz.</div>
+                            <div class="ishlash-bot__txt">@lang('messages.procces_text')</div>
                         </div>
                     </div>
                     <div class="col-md-4  col-12 order-1 order-md-2 ishlash-item--right">

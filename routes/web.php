@@ -31,8 +31,12 @@ Route::get('/locale/{locale}', function ($locale) {
 Route::middleware(['auth'])->group(function(){
 
     Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    })->middleware(['auth'])->name('dashboard');
+            $reviews=count(\App\Models\Review::all());
+            $services=count(\App\Models\Service::all());
+            $messages=count(\App\Models\Message::all());
+            $projects=count(\App\Models\Project::all());
+        return view('admin.dashboard', compact('reviews', 'services', 'messages', 'projects'));
+    })->name('dashboard');
 
     Route::get('/admin', 'App\Http\Controllers\Admin\AdminController@index');
     Route::resource('admin/roles', 'App\Http\Controllers\Admin\RolesController');

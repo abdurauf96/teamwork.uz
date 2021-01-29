@@ -47,6 +47,8 @@
                                     <tr><th> Result2 Ru </th><td> {{ $blokabout->result2_ru }} </td></tr>
                                     <tr><th> Result2 En </th><td> {{ $blokabout->result2_en }} </td></tr>
                                     <tr><th> Value2</th><td> {{ $blokabout->value1 }} </td></tr>
+                                    <tr><th> SEO Description </th><td> {{ $blokabout->seo_desc }} </td></tr>
+                                    <tr><th> SEO Keywords  </th><td> {{ $blokabout->seo_keyword }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

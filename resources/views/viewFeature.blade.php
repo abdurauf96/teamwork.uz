@@ -3,7 +3,7 @@
 @section('breadcrumb')
 <x-breadcrumb >
     <x-slot name="parent">
-        <li><a href="/services">Bizning afzalliklar</a></li>
+        <li><a href="#">{{ $blokfeature['title_'.\App::getLocale()] }}</a></li>
     </x-slot>
     <x-slot name="active">
         {{ $feature['title_'.\App::getLocale()] }}

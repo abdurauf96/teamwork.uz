@@ -3,7 +3,7 @@
 @section('breadcrumb')
 <x-breadcrumb >
     <x-slot name="active">
-        Xizmatlar
+        @lang('messages.services')
     </x-slot>
 </x-breadcrumb>
 @endsection
@@ -12,8 +12,8 @@
 <main class="page-main">		
     <section class="page-avantage">
         <div class="container">
-            <h3 class="block-title">Teamwork.uz quyidagi xizmatlarni <br/> taqdim qiladi</h3>
-            <div class="block-slug mb-5">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual</div>
+            <h3 class="block-title">{{ $blokservice['title_'.\App::getLocale()] }}</h3>
+            <div class="block-slug mb-5">{{ $blokservice['desc_'.\App::getLocale()] }}</div>
 
             <div class="row">
                 @foreach ($services as $service)

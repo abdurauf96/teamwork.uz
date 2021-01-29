@@ -20,15 +20,19 @@ class SiteController extends Controller
         $features=\App\Models\Feature::all();
         $reviews=\App\Models\Review::where('main', 1)->get();
         $blokreview=\App\Models\BlokReview::first();
-        $blokservice=\App\Models\BlokService::first();
+        
         $blokfeature=\App\Models\BlokFeature::first();
         
         
-        return view('welcome', compact('proccesses', 'features', 'reviews', 'blokservice', 'blokfeature', 'blokprocces', 'blokreview'));
+        return view('welcome', compact('proccesses', 'features', 'reviews', 'blokfeature', 'blokprocces', 'blokreview'));
     }
 
     public function about()
     {
+        $blokabout=\App\Models\BlokAbout::first();
+        Meta::prependTitle($blokabout['title_'.\App::getLocale()]);
+        Meta::setDescription($blokabout->seo_desc);
+        Meta::setKeywords($blokabout->seo_keyword);
         return view('about');
     }
 
@@ -81,7 +85,7 @@ class SiteController extends Controller
         Meta::setDescription($blokservice->seo_desc);
         Meta::setKeywords($blokservice->seo_keyword);
 
-        return view('services', compact('services'));
+        return view('services', compact('services', 'blokservice'));
     }
 
     public function viewService($slug)
@@ -93,7 +97,7 @@ class SiteController extends Controller
         Meta::prependTitle($service['name_'.\App::getLocale()]);
         Meta::setDescription($service->seo_desc);
         Meta::setKeywords($service->seo_keyword);
-
+       
         $other_projects=\App\Models\ServiceProject::where('service_id', $service->id)->get();
         return view('viewService', compact('service', 'other_projects'));
     }

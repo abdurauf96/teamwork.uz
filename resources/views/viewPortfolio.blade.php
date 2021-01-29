@@ -27,8 +27,8 @@
 
         <div class="container">
             
-            <h3 class="block-title">Boshqa loyihalarimiz</h3>
-            <p class="block-slug">Barcha turdagi loyihalar bilan tanishing</p>
+            <h3 class="block-title">@lang('messages.other_pro')</h3>
+            <p class="block-slug">@lang('messages.other_pro2')</p>
                 <div class="other-work-sl owl-carousel">
                     @foreach ($other_projects as $pro)
                     <div class="tb-filter">

@@ -3,7 +3,7 @@
 @section('breadcrumb')
 <x-breadcrumb >
     <x-slot name="parent">
-        <li><a href="/services">Xizmatlar</a></li>
+        <li><a href="/services">@lang('messages.services')</a></li>
     </x-slot>
     <x-slot name="active">
         {{ $service['name_'.\App::getLocale()] }}
@@ -40,7 +40,7 @@
         @if (count($service->technologies)>0)
         <div class="container pt-5">
             <div class="texno-section">
-                <h3 class="block-title">Logotip quyidagi texnologiyalar orqali chiziladi. Siz istagan tur bo'yicha</h3>
+                <h3 class="block-title">@lang('messages.logo')</h3>
 
                 <div class="row mt-5 justify-content-center">
                     @foreach ($service->technologies as $tech)
@@ -61,8 +61,8 @@
 
     <div class="section">
         <div class="container">
-            <h3 class="block-title">Bajarilgan loyihalar</h3>
-            <div class="block-slug">Bizning tajribali mutaxassislarimiz tomonidan yaratilgan loyihalar bilan tanishing</div>
+            <h3 class="block-title">@lang('messages.done_pro')</h3>
+            <div class="block-slug">@lang('messages.our_pro')</div>
         
             <div class="done-project-sl owl-carousel">
                 @foreach ($other_projects as $pro)
