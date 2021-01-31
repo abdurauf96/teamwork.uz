@@ -5,7 +5,7 @@
         <div class="row">
             
 
-            <div class="col-md-12">
+            <div class="col-md-10">
                 <div class="card">
                     <div class="card-header">Create New BlokAbout</div>
                     <div class="card-body">
