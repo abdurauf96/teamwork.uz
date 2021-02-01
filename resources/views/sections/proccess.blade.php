@@ -8,7 +8,7 @@
                 <div class="col-md-4  col-12 order-0 order-md-0 ishlash-item--left">
                 @foreach ($proccesses as $proc)
                     <div class="ishlash-item" data-aos="fade-up" data-aos-duration="200">
-                        <div class="ishlash-item__count ishlash-item__count--magenta">{{ $loop->iteration }}</div>
+                        <div class="ishlash-item__count ishlash-item__count--{{ $proc->color }}">{{ $loop->iteration }}</div>
                         <div class="ishlash-item__txt">{{ $proc['title_'.\App::getLocale()] }}</div>
                     </div>
                     @if ($loop->iteration==3)

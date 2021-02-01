@@ -28,7 +28,7 @@
                     <span class="tb-it__img">
                         <img class="lazy" src="/admin/images/{{ $project->image }}" alt="">
                     </span>
-                    <span class="tb-it__main magenta-gradient">
+                    <span class="tb-it__main {{ $project->color }}">
                         <b>{{ $project->category['name_'.\App::getLocale()] }}</b>
                         <span> @lang('messages.created')
                         {{ $project->author }}</span>

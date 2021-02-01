@@ -24,7 +24,7 @@
                     </article>
                     
                     @if (Route::currentRouteName()=='main')
-                    <a href="about.html" class="btn-more" data-aos="fade-up" data-aos-duration="1000">
+                    <a href="/about" class="btn-more" data-aos="fade-up" data-aos-duration="1000">
                          @lang('messages.more')
                     </a>
                     @else

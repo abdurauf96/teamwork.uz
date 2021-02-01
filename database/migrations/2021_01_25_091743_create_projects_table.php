@@ -27,6 +27,7 @@ class CreateProjectsTable extends Migration
             $table->text('seo_desc')->nullable();
             $table->string('seo_keyword')->nullable();
             $table->string('slug')->nullable();
+            $table->string('color')->nullable();
             });
     }
 
