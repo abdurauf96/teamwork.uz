@@ -20,7 +20,7 @@
                 <div class="page-avantage-item avantage-item">
                     <a href="{{ route('viewService', $service->slug) }}" class="avantage-item-wr">
                         <div class="ow-item__img mb-3" style="background-color: #E0F7FC">
-                            <img src="/admin/images/{{ $service->image }}" alt="logo des">
+                            <img src="/admin/images/{{ $service->icon }}" alt="logo des">
                         </div>
                         <div class="avantage-item__tit">
                             {{ $service['name_'.\App::getLocale()] }}

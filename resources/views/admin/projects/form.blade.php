@@ -69,6 +69,16 @@
     {!! Form::file('image', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control']) !!}
     {!! $errors->first('image', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('image') ? 'has-error' : ''}}">
+    {!! Form::label('gradient', 'Gradient', ['class' => 'control-label']) !!}
+    <select name="color" class="form-control" id="">
+        <option value="magenta-gradient">Magenta</option>
+        <option value="green-gradient">Green</option>
+        <option value="yellow-gradient">Yellow</option>
+        <option value="blue-gradient">Blue</option>
+    </select>
+</div>
+
 <div class="form-group{{ $errors->has('seo_desc') ? 'has-error' : ''}}">
     {!! Form::label('seo_desc', 'Seo Description', ['class' => 'control-label']) !!}
     {!! Form::textarea('seo_desc', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control',  'rows'=>5]) !!}

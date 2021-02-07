@@ -17,6 +17,17 @@
     {!! Form::label('order', 'Order ', ['class' => 'control-label']) !!}
     {!! Form::number('order', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control', 'rows'=>5]) !!}
 </div>
+<div class="form-group{{ $errors->has('image') ? 'has-error' : ''}}">
+    {!! Form::label('gradient', 'Background-color', ['class' => 'control-label']) !!}
+    <select name="color" class="form-control" id="">
+        <option value="magenta">Magenta</option>
+        <option value="grey">Gray</option>
+        <option value="green">Green</option>
+        <option value="yell">Yellow</option>
+        <option value="blue">Blue</option>
+        <option value="yell2">Orange</option>
+    </select>
+</div>
 <div class="form-group">
     {!! Form::submit($formMode === 'edit' ? 'Update' : 'Create', ['class' => 'btn btn-primary']) !!}
 </div>

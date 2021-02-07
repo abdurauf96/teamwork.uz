@@ -29,7 +29,7 @@ class Proccess extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'order'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'order', 'color'];
 
     
 

@@ -11,12 +11,12 @@ class SiteController extends Controller
     public function main()
     {
         
-        Meta::prependTitle('Bosh Sahifa');
-        Meta::setDescription('Awesome page');
-        Meta::setKeywords(['Awesome keyword', 'keyword2']);
+        Meta::prependTitle('Teamwork');
+        Meta::setDescription(setting('home_seo_desc'));
+        Meta::setKeywords(setting('home_seo_keyword'));
 
         $proccesses=\App\Models\Proccess::orderBy('order')->get();
-        $blokprocces=\App\Models\Blokprocce::first();
+        $blokprocces=\App\Models\BlokProcce::first();
         $features=\App\Models\Feature::all();
         $reviews=\App\Models\Review::where('main', 1)->get();
         $blokreview=\App\Models\BlokReview::first();
