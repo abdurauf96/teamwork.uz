@@ -16,19 +16,19 @@ class Message extends Component
         return view('livewire.message');
     }
 
-    protected $messages = [
-        'name.required' => 'The Name cannot be empty.',
-        'phone.required' => 'The Phone number cannot be empty.',
-    ];
+    // protected $messages = [
+    //     'name.required' => 'The Name cannot be empty.',
+    //     'phone.required' => 'The Phone number cannot be empty.',
+    // ];
 
-    protected $rules = [
-        'name' => 'required',
-        'phone' => 'required',
-    ];
+    // protected $rules = [
+    //     'name' => 'required',
+    //     'phone' => 'required',
+    // ];
 
     public function sendMessage()
     {
-        $this->validate();
+        //$this->validate();
         
         \App\Models\Message::create(['name'=>$this->name, 'phone'=>$this->phone]);
         $message=<<<TEXT

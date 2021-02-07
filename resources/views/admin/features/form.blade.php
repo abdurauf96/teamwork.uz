@@ -54,7 +54,11 @@
         {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
-
+<div class="form-group{{ $errors->has('title_en') ? 'has-error' : ''}}">
+    {!! Form::label('title_en', 'Background', ['class' => 'control-label']) !!}
+    <input type="color" name="color" > 
+    {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group{{ $errors->has('icon') ? 'has-error' : ''}}">
     {!! Form::label('icon', 'Icon', ['class' => 'control-label']) !!}
     {!! Form::file('icon', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control']) !!}

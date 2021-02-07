@@ -3,7 +3,8 @@
         <div class="row align-items-center">
             
             <div class="col-lg-6">
-                <div class="fr form-white" data-aos="fade-right" data-aos-duration="300">
+                
+                <div class="fr @if(Route::currentRouteName()=='main') form-white @endif" data-aos="fade-right" >
                     <div class="block-title text-left">@lang('messages.pro_title')</div>
                     <div class="block-slug text-left">@lang('messages.pro_desc')</div>
 

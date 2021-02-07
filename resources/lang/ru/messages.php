@@ -1,0 +1,38 @@
+<?php
+
+return [
+    'modern'=>'Zamonaviy loyihalar',
+    'totop'=>"YUQORIGA KO'TARING",
+    'aboutUs'=>"Biz haqimizda",
+    'useful'=>"Foydali havolalar",
+    'services'=>"Xizmatlar",
+    'contacts'=>"Kontaktlar",
+    'reserved'=>"Teamwork.uz 2020 - 2021. Barcha huquqlar himoyalangan",
+    'sent'=>"Xabaringiz jo'natildi!",
+    'sent2'=>"Tez orada bizning mutaxassislarimiz siz bilan
+    bog'lanishadi",
+    'type'=>"Ma'lumotlaringizni kiriting",
+    'type2'=>"Loyihani boshlash uchun ma'lumotlaringizni kiriting",
+    'start'=>"Loyihani boshlash",
+    'fill'=>"Ma'lumotlaringizni to'ldiring",
+    'name'=>"Ism",
+    'phone'=>"Telefon",
+    'msg'=>"Xabar matni",
+    'send'=>"Jo'natish",
+    'proj'=>"loyiha haqida qisqacha",
+    'msg_sent'=>"Sizning murojaatingiz qabul qilingandan so'ng biz siz bilan bog'lanamiz va sizga qo'limizdan kelgancha ko'maklashamiz...",
+    'created'=>'muallif',
+    'all'=>'Barchasi',
+    'more'=>'Batafsil',
+    'pro_title'=>"Loyihangiz sifatli bo'lishini istaysizmi?",
+    'pro_desc'=>"Sizda topshiriq bormi? Uni darhol <br /> Teamwork.uz ga topshiring",
+    'procces_text'=>"Biz esa mutaxassisga xizmat narxini to’lab beramiz.",
+    'contactUs'=>"Biz bilan bog'lanish",
+    'other_pro'=>"Boshqa loyihalarimiz",
+    'other_pro2'=>"Barcha turdagi loyihalar bilan tanishing",
+    'logo'=>"Logotip quyidagi texnologiyalar orqali chiziladi. Siz istagan tur bo'yicha",
+    'done_pro'=>"Bajarilgan loyihalar",
+    'our_pro'=>"Bizning tajribali mutaxassislarimiz tomonidan yaratilgan loyihalar bilan tanishing",
+    'name_req'=>'Заполните это поле!',
+
+];

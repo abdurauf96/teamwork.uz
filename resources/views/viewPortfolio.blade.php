@@ -18,7 +18,7 @@
     
         <div class="container">
             <h3 class="block-title">{{ $project['title_'.\App::getLocale()] }}</h3>
-            <div class="block-slug">{{ $project['desc_'.\App::getLocale()] }}</div>
+            <div class="block-slug">{{ $project['body_'.\App::getLocale()] }}</div>
 
             <div class="work-img">
                 <img class="lazy" data-src="/admin/images/{{ $project->image }}" alt="work image">

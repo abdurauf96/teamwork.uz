@@ -25,6 +25,7 @@ class CreateServicesTable extends Migration
             $table->text('body_ru')->nullable();
             $table->text('body_en')->nullable();
             $table->string('icon')->nullable();
+            $table->string('color')->nullable();
             $table->string('slug')->unique();
             $table->text('seo_desc')->nullable();
             $table->text('seo_keyword')->nullable();

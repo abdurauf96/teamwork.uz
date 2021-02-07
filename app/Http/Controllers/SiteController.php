@@ -22,9 +22,11 @@ class SiteController extends Controller
         $blokreview=\App\Models\BlokReview::first();
         
         $blokfeature=\App\Models\BlokFeature::first();
+        $topblok=\App\Models\TopBlock::first();
         
         
-        return view('welcome', compact('proccesses', 'features', 'reviews', 'blokfeature', 'blokprocces', 'blokreview'));
+        
+        return view('welcome', compact('proccesses', 'features', 'reviews', 'blokfeature', 'blokprocces', 'blokreview', 'topblok'));
     }
 
     public function about()
@@ -73,7 +75,8 @@ class SiteController extends Controller
 
     public function contact()
     {
-        return view('contact');
+        $link=\App\Models\Link::first();
+        return view('contact', compact('link'));
     }
 
     public function services()

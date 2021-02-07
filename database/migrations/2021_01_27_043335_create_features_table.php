@@ -25,6 +25,7 @@ class CreateFeaturesTable extends Migration
             $table->text('desc_en')->nullable();
             $table->text('body_en')->nullable();
             $table->string('icon')->nullable();
+            $table->string('color')->nullable();
             $table->string('slug')->nullable();
             });
     }

@@ -33,5 +33,6 @@ return [
     'logo'=>"Logotip quyidagi texnologiyalar orqali chiziladi. Siz istagan tur bo'yicha",
     'done_pro'=>"Bajarilgan loyihalar",
     'our_pro'=>"Bizning tajribali mutaxassislarimiz tomonidan yaratilgan loyihalar bilan tanishing",
+    'name_req'=>'Iltimos, maydonni to`ldiring!',
 
 ];

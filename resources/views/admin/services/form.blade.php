@@ -63,6 +63,11 @@
         <img width="60" src="/admin/images/{{ $service->icon }}" alt="">
     @endisset
 </div>
+<div class="form-group{{ $errors->has('title_en') ? 'has-error' : ''}}">
+    {!! Form::label('title_en', 'Background', ['class' => 'control-label']) !!}
+    <input type="color" name="color" > 
+    {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group{{ $errors->has('seo_desc') ? 'has-error' : ''}}">
     {!! Form::label('seo_desc', 'Seo Desc', ['class' => 'control-label']) !!}
     {!! Form::textarea('seo_desc', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control', 'rows'=>5]) !!}

@@ -7,7 +7,7 @@
             @foreach ($features as $feature)
             <div class="col-lg-3 col-md-4 col-12 avantage-item">
                 <a href=" @if($feature['body_'.\App::getLocale()]!='') {{ route('viewFeature', $feature->slug) }} @else # @endif " class="avantage-item-wr">
-                    <div class="avantage-item__img">
+                    <div class="avantage-item__img" style="background-color: {{ $feature->color }}">
                         <img src="/admin/images/{{ $feature->icon }}" alt="av pic 1">
                     </div>
                     <div class="avantage-item__tit">

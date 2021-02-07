@@ -10,15 +10,15 @@ class ProjectForm2 extends Component
     public $phone;
     public $message;
 
-    protected $messages = [
-        'name.required' => 'The Name cannot be empty.',
-        'phone.required' => 'The Phone cannot be empty.',
-    ];
+    // protected $messages = [
+    //     'name.required' => 'The Name cannot be empty.',
+    //     'phone.required' => 'The Phone cannot be empty.',
+    // ];
 
-    protected $rules = [
-        'name' => 'required',
-        'phone' => 'required',
-    ];
+    // protected $rules = [
+    //     'name' => 'required',
+    //     'phone' => 'required',
+    // ];
 
     public function render()
     {
@@ -27,8 +27,8 @@ class ProjectForm2 extends Component
 
     public function sendMessage()
     {
-        $this->validate();
-
+        //$this->validate();
+       
         \App\Models\Message::create([
             'name'=>$this->name,
             'phone'=>$this->phone, 

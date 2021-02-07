@@ -23,7 +23,7 @@
 	<!-- FONTS -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-	<link href="css/fonts.css" rel="stylesheet">
+	<link href="/css/fonts.css" rel="stylesheet">
 
 </head>
 <body>
@@ -94,21 +94,21 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-5 col-md-7 col-12 order-1 order-md-0">
-						<div class="header-slug" data-aos="fade-right" data-aos-duration="500">{{ __('messages.modern') }}</div>
-						<h1 class="header-title" data-aos="fade-right" data-aos-duration="800">Teamwork.uz</h1>
-						<p class="header-txt" data-aos="fade-right" data-aos-duration="1000">{{ setting('home_'.\App::getLocale()) }}</p>
+						<div class="header-slug" data-aos="fade-right" data-aos-duration="500">{{ $topblok['desc_'.\App::getLocale()]}}</div>
+						<h1 class="header-title" data-aos="fade-right" data-aos-duration="800">{{ $topblok['title_'.\App::getLocale()]}}</h1>
+						<p class="header-txt" data-aos="fade-right" data-aos-duration="1000">{{ $topblok['body_'.\App::getLocale()]}}</p>
 					</div>
 					<div class="col-lg-6 col-md-4 col-12 order-0 order-md-1">
 						<div class="header-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" >
-							<img src="img/Header-image.png" alt="header" class="img-responsive">
+							<img src="/admin/images/{{ $topblok->image }}" alt="header" class="img-responsive">
 						</div>
 					</div>
 					<div class="col-lg-1 col-md-1 col-12 order-2 align-self-baseline" data-aos="fade-up" data-aos-duration="500">
 						<div>
 							<div class="social" data-aos="fade-up" data-aos-duration="500">
-								<a href="#" data-toggle="tooltip" title="instagram"><i class="fab fa-instagram"></i></a>
-								<a href="#" data-toggle="tooltip" title="telegram"><i class="fab fa-telegram-plane"></i></a>
-								<a href="#" data-toggle="tooltip" title="facebook"><i class="fab fa-facebook-f"></i></a>
+								<a href="{{ $link->insta }}" data-toggle="tooltip" title="instagram"><i class="fab fa-instagram"></i></a>
+								<a href="{{ $link->tg }}" data-toggle="tooltip" title="telegram"><i class="fab fa-telegram-plane"></i></a>
+								<a href="{{ $link->fb }}" data-toggle="tooltip" title="facebook"><i class="fab fa-facebook-f"></i></a>
 							</div>	
 						</div>
 						<div class="btn-slide" >
@@ -152,9 +152,9 @@
 				
 				<div class="row">
 					<div class="col-lg-3 col-md-6 col-12 mb-4" data-aos="fade-up" data-aos-duration="300">
-						<div class="fot-top__title">@lang('messages.aboutUs')</div>
-						<p class="about-p">{{ setting('footer_info_'.\App::getLocale()) }}</p>
-						<a href="/" class="logo-fot"><img src="img/logo-fot.svg" alt="teamwork logo"></a>
+						<div class="fot-top__title">{{ $link['about_title_'.\App::getLocale()] }}</div>
+						<p class="about-p">{{ $link['about_desc_'.\App::getLocale()] }}</p>
+						<a href="/" class="logo-fot"><img src="/img/logo-fot.svg" alt="teamwork logo"></a>
 	
 					</div>
 					<div class="col-lg-3 col-md-6 col-12 mb-4" data-aos="fade-up" data-aos-duration="300">
@@ -198,16 +198,16 @@
 				
 				<div class="row">
 					<div class="col-md-6 col-12 text-md-left text-center mb-3" data-aos="fade-right" data-aos-duration="300">
-						<a href="#" class="copyright">© @lang('messages.reserved')</a>
+						<a href="#" class="copyright">{{ $link['footer_'.\App::getLocale()] }}</a>
 					</div>
 					<div class="col-md-6 col-12 text-md-right text-center mb-3" data-aos="fade-left" data-aos-duration="300">
 						<div class="fot-social">
-							<a href="#" data-toggle="tooltip" title="instagram"><i class="fab fa-instagram"></i></a>
-							<a href="#" data-toggle="tooltip" title="telegram"><i class="fab fa-telegram-plane"></i></a>
-							<a href="#" data-toggle="tooltip" title="facebook"><i class="fab fa-facebook-f"></i></a>
-							<a href="#" data-toggle="tooltip" title="tiktok"><img src="img/tiktok-brands.svg" alt=""></a>
-							<a href="#" data-toggle="tooltip" title="youtube"><i class="fab fa-youtube"></i></a>
-							<a href="#" data-toggle="tooltip" title="wk"><i class="fab fa-vk"></i></a>
+							<a href="{{ $link->insta }}" data-toggle="tooltip" title="instagram"><i class="fab fa-instagram"></i></a>
+							<a href="{{ $link->tg }}" data-toggle="tooltip" title="telegram"><i class="fab fa-telegram-plane"></i></a>
+							<a href="{{ $link->fb }}" data-toggle="tooltip" title="facebook"><i class="fab fa-facebook-f"></i></a>
+							<a href="{{ $link->tiktok }}" data-toggle="tooltip" title="tiktok"><img src="/img/tiktok-brands.svg" alt=""></a>
+							<a href="{{ $link->youtube }}" data-toggle="tooltip" title="youtube"><i class="fab fa-youtube"></i></a>
+							<a href="{{ $link->wk }}" data-toggle="tooltip" title="wk"><i class="fab fa-vk"></i></a>
 						</div>
 					</div>
 				</div>
@@ -222,7 +222,7 @@
 	        <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        <div class="cal-mod">
 	          <div class="succes-icon">
-	            <img src="img/success.svg" alt="">
+	            <img src="/img/success.svg" alt="">
 	          </div>
 	           <div class="cal-mod__title">
 	             @lang('messages.sent')
@@ -244,7 +244,7 @@
 	
 	        <div class="cal-mod">
 	          <div class="succes-icon">
-	            <img src="img/form-project-icon.svg" alt="">
+	            <img src="/img/form-project-icon.svg" alt="">
 	          </div>
 	          <div class="cal-mod__title">
 	             @lang('messages.type')

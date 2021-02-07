@@ -16,7 +16,8 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('layouts.site', function($view){
             $menus=\App\Models\Menu::orderBy('order')->get();
             $services=\App\Models\Service::all();
-            $view->with(compact('menus', 'services'));
+            $link=\App\Models\Link::first();
+            $view->with(compact('menus', 'services', 'link'));
         });
 
         view()->composer('sections.about', function($view){
