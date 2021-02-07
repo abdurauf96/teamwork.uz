@@ -29,7 +29,7 @@ class TopBlock extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'desc_uz', 'body_uz', 'title_ru', 'desc_ru', 'body_ru', 'title_en', 'desc_en', 'body_en', 'image'];
+    protected $fillable = ['title_uz', 'desc_uz', 'body_uz', 'title_ru', 'desc_ru', 'body_ru', 'title_en', 'desc_en', 'body_en', 'image', 'seo_desc', 'seo_keyword'];   
 
     
 

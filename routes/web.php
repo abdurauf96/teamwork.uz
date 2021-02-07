@@ -75,7 +75,9 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('admin/blok-portfolio', '\App\Http\Controllers\Admin\BlokPortfolioController');
     Route::resource('admin/link', '\App\Http\Controllers\Admin\LinkController');
     Route::resource('admin/top-block', '\App\Http\Controllers\Admin\TopBlockController');
+    Route::resource('admin/about-page', '\App\Http\Controllers\Admin\AboutPageController');
 });
 
 require __DIR__.'/auth.php';
+
 

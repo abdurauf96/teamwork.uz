@@ -42,7 +42,7 @@
                                 <tbody>
                                 @foreach($about as $item)
                                     <tr>
-                                        <td>{{ $loop->iteration or $item->id }}</td>
+                                        <td>{{ $loop->iteration  }}</td>
                                         <td>{{ $item['main_title_'.\App::getLocale()] }}</td>
                                         <td>{{ $item['main_desc_'.\App::getLocale()] }}</td>
                                        

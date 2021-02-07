@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
 
-class Message extends Model
+class AboutPage extends Model
 {
     use LogsActivity;
     
@@ -15,7 +15,7 @@ class Message extends Model
      *
      * @var string
      */
-    protected $table = 'messages';
+    protected $table = 'about_pages';
 
     /**
     * The database primary key value.
@@ -29,7 +29,7 @@ class Message extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'phone', 'message', 'email', 'type'];
+    protected $fillable = ['main_title_uz', 'main_title_ru', 'main_title_en', 'main_desc_uz', 'main_desc_ru', 'main_desc_en', 'second_title_uz', 'second_title_ru', 'second_title_en', 'second_desc_uz', 'second_desc_ru', 'second_desc_en', 'image', 'link'];
 
     
 

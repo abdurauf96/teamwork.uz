@@ -99,6 +99,9 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           
           <ul class="sidebar-menu "> 
+            <li><a class="menu-url" href="/admin/menus"><i class="fa fa-circle-o"></i> Menyular</a></li>
+            
+
             @foreach($laravelAdminMenus->menus as $section)
             <li class="treeview">
               <a href="#">
@@ -114,6 +117,12 @@
               @endif
             </li>
             @endforeach
+
+            <li><a class="menu-url" href="{{ route('messages.index') }}"><i class="fa fa-circle-o"></i> Murojatlar</a></li>
+            <li><a class="menu-url" href="{{ route('personals.index') }}"><i class="fa fa-circle-o"></i> Bizning jamoa</a></li>
+            <li><a class="menu-url" href="{{ route('partners.index') }}"><i class="fa fa-circle-o"></i>Hamkorlar</a></li>
+            <li><a class="menu-url" href="{{ route('features.index') }}"><i class="fa fa-circle-o"></i>Bizning afzalliklar</a></li>
+            <li><a class="menu-url" href="{{ route('reviews.index') }}"><i class="fa fa-circle-o"></i>Mijozlar fikri</a></li>
           </ul>
           
          
@@ -172,7 +181,15 @@
        $(function () {
            // Navigation active
            $('ul.navbar-nav a[href="{{ "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" }}"]').closest('li').addClass('active');
+
+           var url=window.location.href;
+           console.log(url);
+            $('[href="'+ url +'"]').parent().parent().parent().addClass('active');
+            $('[href="'+ url +'"]').parent().parent().parent().addClass('menu-open');
+            $('[href="'+ url +'"]').parent().addClass('active');
+
        });
+       
    </script>
     @yield('js')
     

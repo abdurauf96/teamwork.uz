@@ -30,10 +30,11 @@ class Message extends Component
     {
         //$this->validate();
         
-        \App\Models\Message::create(['name'=>$this->name, 'phone'=>$this->phone]);
+        \App\Models\Message::create(['name'=>$this->name, 'phone'=>$this->phone, 'type'=>"Loyiha sifatli bo'lishi uchun"]);
         $message=<<<TEXT
         Murojat qoldirildi!
 
+        Murojat turi: Loyiha sifatli bo'lishi uchun
         Telefon: {$this->phone}
         Ismi: {$this->name}
 TEXT;

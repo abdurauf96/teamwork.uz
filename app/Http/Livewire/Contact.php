@@ -32,12 +32,14 @@ class Contact extends Component
         \App\Models\Message::create([
             'name'=>$this->name,
             'phone'=>$this->phone, 
-            'message'=>$this->message
+            'message'=>$this->message,
+            'type'=>"Biz bilan bog'lanish"
         ]);
         
         $message=<<<TEXT
         Murojat qoldirildi!
 
+        Murojat turi: Biz bilan bog'lanish
         Telefon: {$this->phone}
         Ismi: {$this->name}
         Murojat matni: {$this->message}

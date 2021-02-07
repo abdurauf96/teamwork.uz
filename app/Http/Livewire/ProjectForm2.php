@@ -32,12 +32,14 @@ class ProjectForm2 extends Component
         \App\Models\Message::create([
             'name'=>$this->name,
             'phone'=>$this->phone, 
-            'message'=>$this->message
+            'message'=>$this->message,
+            'type'=>"Loyiha sifatli bo'lishi uchun"
         ]);
         
         $message=<<<TEXT
         Murojat qoldirildi!
 
+        Murojat turi: Loyiha sifatli bo'lishi uchun
         Telefon: {$this->phone}
         Ismi: {$this->name}
         Loyiha haqida: {$this->message}

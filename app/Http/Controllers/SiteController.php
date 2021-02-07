@@ -11,9 +11,7 @@ class SiteController extends Controller
     public function main()
     {
         
-        Meta::prependTitle('Teamwork');
-        Meta::setDescription(setting('home_seo_desc'));
-        Meta::setKeywords(setting('home_seo_keyword'));
+        
 
         $proccesses=\App\Models\Proccess::orderBy('order')->get();
         $blokprocces=\App\Models\BlokProcce::first();
@@ -23,7 +21,9 @@ class SiteController extends Controller
         
         $blokfeature=\App\Models\BlokFeature::first();
         $topblok=\App\Models\TopBlock::first();
-        
+        Meta::prependTitle('Teamwork');
+        Meta::setDescription($topblok->seo_desc);
+        Meta::setKeywords($topblok->seo_keyword);
         
         
         return view('welcome', compact('proccesses', 'features', 'reviews', 'blokfeature', 'blokprocces', 'blokreview', 'topblok'));
@@ -32,10 +32,13 @@ class SiteController extends Controller
     public function about()
     {
         $blokabout=\App\Models\BlokAbout::first();
+        $about=\App\Models\AboutPage::first();
+        $blokabout=\App\Models\BlokAbout::first();
+        $numbers=\App\Models\Number::all();
         Meta::prependTitle($blokabout['title_'.\App::getLocale()]);
         Meta::setDescription($blokabout->seo_desc);
         Meta::setKeywords($blokabout->seo_keyword);
-        return view('about');
+        return view('about', compact('about', 'blokabout','numbers'));
     }
 
     public function portfolio()

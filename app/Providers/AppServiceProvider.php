@@ -22,9 +22,7 @@ class AppServiceProvider extends ServiceProvider
 
         view()->composer('sections.about', function($view){
             $about=\App\Models\About::first();
-            $blokabout=\App\Models\BlokAbout::first();
-            $numbers=\App\Models\Number::all();
-            $view->with(compact('about','blokabout','numbers'));
+            $view->with(compact('about'));
         });
 
         view()->composer('sections.success', function($view){

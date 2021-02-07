@@ -24,6 +24,8 @@ class CreateTopBlocksTable extends Migration
             $table->string('title_en')->nullable();
             $table->string('desc_en')->nullable();
             $table->text('body_en')->nullable();
+            $table->text('seo_desc')->nullable();
+            $table->text('seo_keyword')->nullable();
             $table->string('image')->nullable();
             });
     }

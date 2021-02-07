@@ -62,6 +62,16 @@
     {!! $errors->first('image', '<p class="help-block">:message</p>') !!}
 </div>
 
+<div class="form-group{{ $errors->has('seo_desc') ? 'has-error' : ''}}">
+    {!! Form::label('seo_desc', 'Seo Description', ['class' => 'control-label']) !!}
+    {!! Form::textarea('seo_desc', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control', 'rows'=>5]) !!}
+    {!! $errors->first('seo_desc', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('seo_keyword') ? 'has-error' : ''}}">
+    {!! Form::label('seo_keyword', 'Seo Keyword', ['class' => 'control-label']) !!}
+    {!! Form::textarea('seo_keyword', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control', 'rows'=>5]) !!}
+    {!! $errors->first('seo_keyword', '<p class="help-block">:message</p>') !!}
+</div>
 
 <div class="form-group">
     {!! Form::submit($formMode === 'edit' ? 'Update' : 'Create', ['class' => 'btn btn-primary']) !!}

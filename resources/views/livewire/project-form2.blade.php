@@ -18,6 +18,5 @@
         <div class="form-faq mb-4 block-slug text-left">
             <span class="color-red">*</span> @lang('messages.msg_sent')
         </div>
-
         <button class="btn-submit send_message btn-more">@lang('messages.send')</button>
     </form>

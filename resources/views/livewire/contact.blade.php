@@ -15,7 +15,7 @@
     <div class="page-form-inp">
         <textarea name="XabarMatni" wire:model="message"   placeholder="@lang('messages.msg')"></textarea>
     </div>
-
+    
     <button type="submit" class="btn-more send_message">@lang('messages.send') <i class="ml-3 fas fa-paper-plane"></i></button>
 
 </form>

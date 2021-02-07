@@ -43,6 +43,8 @@
                                     <tr><th> Title En </th><td> {{ $topblock->title_en }} </td></tr>
                                     <tr><th> Description En </th><td> {{ $topblock->desc_en }} </td></tr>
                                     <tr><th> Body En </th><td> {{ $topblock->body_en }} </td></tr>
+                                    <tr><th> SEO Description </th><td> {{ $topblock->seo_desc }} </td></tr>
+                                    <tr><th> SEO Keyword </th><td> {{ $topblock->seo_keyword }} </td></tr>
                                     <tr><th> Image </th><td> <img src="/admin/images/{{ $topblock->image }}" width="100" alt=""> </td></tr>
                                 </tbody>
                             </table>
